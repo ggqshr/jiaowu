@@ -41,7 +41,11 @@ def clean_ext():
     filter_count = 0
     for col_name in all_col:
         this_col = db.get_collection(col_name)
-        for item in tqdm(this_col.find({},no_cursor_timeout=True,batch_size=1000000),desc=col_name,):
+        item_list = []
+        for item in tqdm(this_col.find({},no_cursor_timeout=True,batch_size=10000),desc=col_name,):
+            if len(item_list) != 0 and len(item_list) % 100000 == 0:
+                target_col.insert_many(item_list)
+                item_list.clear()
             flag = False
             text = item.get("pjxx","")
             item["clean_ext"] = False
@@ -53,7 +57,9 @@ def clean_ext():
                         item['clean_ext'] = True
                         filter_count += 1
                         break
-            target_col.insert_one(item)
+            item_list.append(item)
+        if len(item_list) != 0:
+            target_col.insert_many(item_list)
     print(f"{filter_count=}")
 
 if __name__ == '__main__':
