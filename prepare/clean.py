@@ -6,6 +6,8 @@ write 2020.11.21 15:04
 from pymongo import MongoClient
 from pprint import pprint
 from tqdm import tqdm
+from threading import Thread
+from queue import Queue,Empty
 import re
 
 f_list= [
@@ -36,6 +38,18 @@ all_col = [
         "XSPFB_201520161",
         ]
 
+queue = Queue()
+
+def process_insert():
+    insert_col = db.get_collection("simple_clean_pjxx")
+    while True:
+        print("insert_thread start")
+        try:
+            items = queue.get(timeout=30)
+            insert_col.insert_many(items)
+        except Empty:
+            return
+
 
 def clean_ext():
     filter_count = 0
@@ -44,7 +58,7 @@ def clean_ext():
         item_list = []
         for item in tqdm(this_col.find({},no_cursor_timeout=True,batch_size=10000),desc=col_name,):
             if len(item_list) != 0 and len(item_list) % 100000 == 0:
-                target_col.insert_many(item_list)
+                queue.put_nowait(item_list)
                 item_list.clear()
             flag = False
             text = item.get("pjxx","")
@@ -63,4 +77,7 @@ def clean_ext():
     print(f"{filter_count=}")
 
 if __name__ == '__main__':
+    insert_thread = Thread(target=process_insert,daemon=True)
+    insert_thread.start()
     clean_ext()
+    insert_thread.join()
