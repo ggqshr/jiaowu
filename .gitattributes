@@ -1,1 +1,2 @@
 data/all_text.txt -diff
+data/word2vec/word_cut_res.txt -text -diff
