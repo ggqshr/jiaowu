@@ -6,14 +6,14 @@ import glob
 from gensim.models import word2vec
 from gensim.models.word2vec import PathLineSentences
 
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO,filename="../result/training.log")
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO,filename="../data/word2vec/model_data/training.log")
 
 
-all_files = word2vec.PathLineSentences("../data/word_data") 
+all_files = word2vec.LineSentence("../data/word2vec/word_cut_res.txt") 
 
 model = word2vec.Word2Vec(all_files,hs=1,min_count=5,iter=5, window=5,size=300,sg=1,workers=40)
-model.save("../result/model_data/1.bin")
-model.wv.save_word2vec_format("../result/model_data/1.dict")
+model.save("../data/word2vec/model_data/1.bin")
+model.wv.save_word2vec_format("../data/word2vec/model_data/1.dict")
 
 
 # for file in file_list:

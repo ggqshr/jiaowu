@@ -2,3 +2,6 @@ data/all_text.txt -diff
 data/word2vec/word_cut_res.txt -text -diff
 data/cache_res/dup_log -text -diff
 data/cache_res/all_alphabeta -text -diff
+data/word2vec/model_data/1.bin binary
+data/word2vec/model_data/1.dict binary
+data/word2vec/model_data/training.log binary
