@@ -67,14 +67,15 @@ def clean_ext():
                 item['clean_ext'] = True
             else:
                 for reg in f_list:
-                    if (aa := re.match(reg,text)):
+                    aa = re.match(reg,text)
+                    if aa:
                         item['clean_ext'] = True
                         filter_count += 1
                         break
             item_list.append(item)
         if len(item_list) != 0:
             target_col.insert_many(item_list)
-    print(f"{filter_count=}")
+    print(f"{filter_count}")
 
 if __name__ == '__main__':
     insert_thread = Thread(target=process_insert,daemon=True)
