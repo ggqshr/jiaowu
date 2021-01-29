@@ -574,3 +574,621 @@
 2021-01-20 21:10:28,279 : INFO : not storing attribute cum_table
 2021-01-20 21:10:29,268 : INFO : saved ../data/word2vec/model_data/1.bin
 2021-01-20 21:10:29,268 : INFO : storing 22194x300 projection weights into ../data/word2vec/model_data/1.dict
+2021-01-29 09:26:46,389 : INFO : collecting all words and their counts
+2021-01-29 09:26:46,389 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2021-01-29 09:26:46,431 : INFO : PROGRESS: at sentence #10000, processed 113911 words, keeping 7329 word types
+2021-01-29 09:26:46,477 : INFO : PROGRESS: at sentence #20000, processed 250003 words, keeping 10763 word types
+2021-01-29 09:26:46,524 : INFO : PROGRESS: at sentence #30000, processed 391088 words, keeping 13416 word types
+2021-01-29 09:26:46,572 : INFO : PROGRESS: at sentence #40000, processed 533654 words, keeping 15687 word types
+2021-01-29 09:26:46,620 : INFO : PROGRESS: at sentence #50000, processed 678044 words, keeping 17737 word types
+2021-01-29 09:26:46,668 : INFO : PROGRESS: at sentence #60000, processed 824531 words, keeping 19701 word types
+2021-01-29 09:26:46,715 : INFO : PROGRESS: at sentence #70000, processed 970553 words, keeping 21028 word types
+2021-01-29 09:26:46,765 : INFO : PROGRESS: at sentence #80000, processed 1118540 words, keeping 22365 word types
+2021-01-29 09:26:46,814 : INFO : PROGRESS: at sentence #90000, processed 1267190 words, keeping 23785 word types
+2021-01-29 09:26:46,864 : INFO : PROGRESS: at sentence #100000, processed 1416415 words, keeping 25014 word types
+2021-01-29 09:26:46,917 : INFO : PROGRESS: at sentence #110000, processed 1564334 words, keeping 26030 word types
+2021-01-29 09:26:46,966 : INFO : PROGRESS: at sentence #120000, processed 1712022 words, keeping 27077 word types
+2021-01-29 09:26:47,018 : INFO : PROGRESS: at sentence #130000, processed 1857067 words, keeping 27969 word types
+2021-01-29 09:26:47,068 : INFO : PROGRESS: at sentence #140000, processed 2003146 words, keeping 28968 word types
+2021-01-29 09:26:47,117 : INFO : PROGRESS: at sentence #150000, processed 2150038 words, keeping 29924 word types
+2021-01-29 09:26:47,166 : INFO : PROGRESS: at sentence #160000, processed 2298674 words, keeping 30904 word types
+2021-01-29 09:26:47,215 : INFO : PROGRESS: at sentence #170000, processed 2445207 words, keeping 31800 word types
+2021-01-29 09:26:47,264 : INFO : PROGRESS: at sentence #180000, processed 2591285 words, keeping 32630 word types
+2021-01-29 09:26:47,313 : INFO : PROGRESS: at sentence #190000, processed 2736984 words, keeping 33418 word types
+2021-01-29 09:26:47,362 : INFO : PROGRESS: at sentence #200000, processed 2884628 words, keeping 34288 word types
+2021-01-29 09:26:47,412 : INFO : PROGRESS: at sentence #210000, processed 3030816 words, keeping 35162 word types
+2021-01-29 09:26:47,461 : INFO : PROGRESS: at sentence #220000, processed 3176808 words, keeping 36042 word types
+2021-01-29 09:26:47,510 : INFO : PROGRESS: at sentence #230000, processed 3323461 words, keeping 36887 word types
+2021-01-29 09:26:47,559 : INFO : PROGRESS: at sentence #240000, processed 3470514 words, keeping 37669 word types
+2021-01-29 09:26:47,611 : INFO : PROGRESS: at sentence #250000, processed 3618495 words, keeping 38398 word types
+2021-01-29 09:26:47,659 : INFO : PROGRESS: at sentence #260000, processed 3763731 words, keeping 39072 word types
+2021-01-29 09:26:47,709 : INFO : PROGRESS: at sentence #270000, processed 3912184 words, keeping 39655 word types
+2021-01-29 09:26:47,758 : INFO : PROGRESS: at sentence #280000, processed 4058419 words, keeping 40336 word types
+2021-01-29 09:26:47,807 : INFO : PROGRESS: at sentence #290000, processed 4202501 words, keeping 41139 word types
+2021-01-29 09:26:47,857 : INFO : PROGRESS: at sentence #300000, processed 4350013 words, keeping 41891 word types
+2021-01-29 09:26:47,908 : INFO : PROGRESS: at sentence #310000, processed 4498547 words, keeping 42485 word types
+2021-01-29 09:26:47,957 : INFO : PROGRESS: at sentence #320000, processed 4642563 words, keeping 43078 word types
+2021-01-29 09:26:48,007 : INFO : PROGRESS: at sentence #330000, processed 4787571 words, keeping 43630 word types
+2021-01-29 09:26:48,059 : INFO : PROGRESS: at sentence #340000, processed 4935828 words, keeping 44250 word types
+2021-01-29 09:26:48,109 : INFO : PROGRESS: at sentence #350000, processed 5085213 words, keeping 44939 word types
+2021-01-29 09:26:48,158 : INFO : PROGRESS: at sentence #360000, processed 5235382 words, keeping 45536 word types
+2021-01-29 09:26:48,208 : INFO : PROGRESS: at sentence #370000, processed 5385169 words, keeping 46129 word types
+2021-01-29 09:26:48,257 : INFO : PROGRESS: at sentence #380000, processed 5533061 words, keeping 46695 word types
+2021-01-29 09:26:48,306 : INFO : PROGRESS: at sentence #390000, processed 5682895 words, keeping 47263 word types
+2021-01-29 09:26:48,356 : INFO : PROGRESS: at sentence #400000, processed 5832134 words, keeping 47919 word types
+2021-01-29 09:26:48,405 : INFO : PROGRESS: at sentence #410000, processed 5978722 words, keeping 48556 word types
+2021-01-29 09:26:48,453 : INFO : PROGRESS: at sentence #420000, processed 6124971 words, keeping 49077 word types
+2021-01-29 09:26:48,503 : INFO : PROGRESS: at sentence #430000, processed 6274003 words, keeping 49655 word types
+2021-01-29 09:26:48,552 : INFO : PROGRESS: at sentence #440000, processed 6425259 words, keeping 50135 word types
+2021-01-29 09:26:48,605 : INFO : PROGRESS: at sentence #450000, processed 6576771 words, keeping 50698 word types
+2021-01-29 09:26:48,656 : INFO : PROGRESS: at sentence #460000, processed 6727821 words, keeping 51214 word types
+2021-01-29 09:26:48,708 : INFO : PROGRESS: at sentence #470000, processed 6879391 words, keeping 51821 word types
+2021-01-29 09:26:48,759 : INFO : PROGRESS: at sentence #480000, processed 7029115 words, keeping 52339 word types
+2021-01-29 09:26:48,809 : INFO : PROGRESS: at sentence #490000, processed 7178898 words, keeping 52866 word types
+2021-01-29 09:26:48,860 : INFO : PROGRESS: at sentence #500000, processed 7329710 words, keeping 53417 word types
+2021-01-29 09:26:48,913 : INFO : PROGRESS: at sentence #510000, processed 7480838 words, keeping 53916 word types
+2021-01-29 09:26:48,964 : INFO : PROGRESS: at sentence #520000, processed 7630967 words, keeping 54474 word types
+2021-01-29 09:26:49,017 : INFO : PROGRESS: at sentence #530000, processed 7783014 words, keeping 55078 word types
+2021-01-29 09:26:49,067 : INFO : PROGRESS: at sentence #540000, processed 7932059 words, keeping 55630 word types
+2021-01-29 09:26:49,116 : INFO : PROGRESS: at sentence #550000, processed 8080041 words, keeping 56140 word types
+2021-01-29 09:26:49,166 : INFO : PROGRESS: at sentence #560000, processed 8229378 words, keeping 56592 word types
+2021-01-29 09:26:49,217 : INFO : PROGRESS: at sentence #570000, processed 8382273 words, keeping 57040 word types
+2021-01-29 09:26:49,266 : INFO : PROGRESS: at sentence #580000, processed 8530348 words, keeping 57527 word types
+2021-01-29 09:26:49,317 : INFO : PROGRESS: at sentence #590000, processed 8682050 words, keeping 57968 word types
+2021-01-29 09:26:49,367 : INFO : PROGRESS: at sentence #600000, processed 8832333 words, keeping 58356 word types
+2021-01-29 09:26:49,421 : INFO : PROGRESS: at sentence #610000, processed 8982019 words, keeping 58828 word types
+2021-01-29 09:26:49,470 : INFO : PROGRESS: at sentence #620000, processed 9130182 words, keeping 59244 word types
+2021-01-29 09:26:49,519 : INFO : PROGRESS: at sentence #630000, processed 9278479 words, keeping 59679 word types
+2021-01-29 09:26:49,569 : INFO : PROGRESS: at sentence #640000, processed 9426733 words, keeping 60186 word types
+2021-01-29 09:26:49,619 : INFO : PROGRESS: at sentence #650000, processed 9576738 words, keeping 60857 word types
+2021-01-29 09:26:49,669 : INFO : PROGRESS: at sentence #660000, processed 9727177 words, keeping 61435 word types
+2021-01-29 09:26:49,719 : INFO : PROGRESS: at sentence #670000, processed 9878069 words, keeping 61897 word types
+2021-01-29 09:26:49,768 : INFO : PROGRESS: at sentence #680000, processed 10028011 words, keeping 62381 word types
+2021-01-29 09:26:49,818 : INFO : PROGRESS: at sentence #690000, processed 10177758 words, keeping 62887 word types
+2021-01-29 09:26:49,871 : INFO : PROGRESS: at sentence #700000, processed 10330438 words, keeping 63358 word types
+2021-01-29 09:26:49,922 : INFO : PROGRESS: at sentence #710000, processed 10481486 words, keeping 63816 word types
+2021-01-29 09:26:49,973 : INFO : PROGRESS: at sentence #720000, processed 10632482 words, keeping 64319 word types
+2021-01-29 09:26:50,024 : INFO : PROGRESS: at sentence #730000, processed 10781524 words, keeping 64890 word types
+2021-01-29 09:26:50,074 : INFO : PROGRESS: at sentence #740000, processed 10932231 words, keeping 65288 word types
+2021-01-29 09:26:50,124 : INFO : PROGRESS: at sentence #750000, processed 11082451 words, keeping 65776 word types
+2021-01-29 09:26:50,174 : INFO : PROGRESS: at sentence #760000, processed 11234179 words, keeping 66201 word types
+2021-01-29 09:26:50,228 : INFO : PROGRESS: at sentence #770000, processed 11385525 words, keeping 66695 word types
+2021-01-29 09:26:50,278 : INFO : PROGRESS: at sentence #780000, processed 11534918 words, keeping 67215 word types
+2021-01-29 09:26:50,327 : INFO : PROGRESS: at sentence #790000, processed 11683683 words, keeping 67647 word types
+2021-01-29 09:26:50,376 : INFO : PROGRESS: at sentence #800000, processed 11830639 words, keeping 68131 word types
+2021-01-29 09:26:50,430 : INFO : PROGRESS: at sentence #810000, processed 11981756 words, keeping 68530 word types
+2021-01-29 09:26:50,480 : INFO : PROGRESS: at sentence #820000, processed 12133726 words, keeping 68979 word types
+2021-01-29 09:26:50,531 : INFO : PROGRESS: at sentence #830000, processed 12288174 words, keeping 69431 word types
+2021-01-29 09:26:50,582 : INFO : PROGRESS: at sentence #840000, processed 12441004 words, keeping 69843 word types
+2021-01-29 09:26:50,632 : INFO : PROGRESS: at sentence #850000, processed 12592513 words, keeping 70247 word types
+2021-01-29 09:26:50,681 : INFO : PROGRESS: at sentence #860000, processed 12744004 words, keeping 70604 word types
+2021-01-29 09:26:50,731 : INFO : PROGRESS: at sentence #870000, processed 12893870 words, keeping 71050 word types
+2021-01-29 09:26:50,781 : INFO : PROGRESS: at sentence #880000, processed 13046471 words, keeping 71793 word types
+2021-01-29 09:26:50,831 : INFO : PROGRESS: at sentence #890000, processed 13195630 words, keeping 72323 word types
+2021-01-29 09:26:50,883 : INFO : PROGRESS: at sentence #900000, processed 13344938 words, keeping 72726 word types
+2021-01-29 09:26:50,904 : INFO : collected 72898 word types from a corpus of 13404989 raw words and 903969 sentences
+2021-01-29 09:26:50,904 : INFO : Loading a fresh vocabulary
+2021-01-29 09:26:50,952 : INFO : effective_min_count=5 retains 21117 unique words (28% of original 72898, drops 51781)
+2021-01-29 09:26:50,952 : INFO : effective_min_count=5 leaves 13325808 word corpus (99% of original 13404989, drops 79181)
+2021-01-29 09:26:51,008 : INFO : deleting the raw counts dictionary of 72898 items
+2021-01-29 09:26:51,010 : INFO : sample=0.001 downsamples 58 most-common words
+2021-01-29 09:26:51,011 : INFO : downsampling leaves estimated 8995575 word corpus (67.5% of prior 13325808)
+2021-01-29 09:26:51,028 : INFO : constructing a huffman tree from 21117 words
+2021-01-29 09:26:51,603 : INFO : built huffman tree with maximum node depth 21
+2021-01-29 09:26:51,643 : INFO : estimated required memory for 21117 words and 300 dimensions: 90803100 bytes
+2021-01-29 09:26:51,643 : INFO : resetting layer weights
+2021-01-29 09:26:55,220 : INFO : training model with 40 workers on 21117 vocabulary and 300 features, using sg=1 hs=1 sample=0.001 negative=5 window=5
+2021-01-29 09:26:56,236 : INFO : EPOCH 1 - PROGRESS: at 0.58% examples, 41291 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:26:57,304 : INFO : EPOCH 1 - PROGRESS: at 1.54% examples, 56700 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:26:58,347 : INFO : EPOCH 1 - PROGRESS: at 3.39% examples, 88949 words/s, in_qsize 2, out_qsize 0
+2021-01-29 09:26:59,394 : INFO : EPOCH 1 - PROGRESS: at 4.39% examples, 88183 words/s, in_qsize 0, out_qsize 2
+2021-01-29 09:27:00,683 : INFO : EPOCH 1 - PROGRESS: at 6.60% examples, 104575 words/s, in_qsize 0, out_qsize 4
+2021-01-29 09:27:01,715 : INFO : EPOCH 1 - PROGRESS: at 8.41% examples, 112834 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:02,731 : INFO : EPOCH 1 - PROGRESS: at 9.45% examples, 110206 words/s, in_qsize 0, out_qsize 1
+2021-01-29 09:27:03,843 : INFO : EPOCH 1 - PROGRESS: at 11.60% examples, 118811 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:04,971 : INFO : EPOCH 1 - PROGRESS: at 12.95% examples, 117590 words/s, in_qsize 0, out_qsize 2
+2021-01-29 09:27:05,993 : INFO : EPOCH 1 - PROGRESS: at 14.77% examples, 121464 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:07,123 : INFO : EPOCH 1 - PROGRESS: at 16.21% examples, 120747 words/s, in_qsize 1, out_qsize 2
+2021-01-29 09:27:08,175 : INFO : EPOCH 1 - PROGRESS: at 17.85% examples, 122501 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:09,292 : INFO : EPOCH 1 - PROGRESS: at 19.43% examples, 122875 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:10,342 : INFO : EPOCH 1 - PROGRESS: at 21.17% examples, 124594 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:11,592 : INFO : EPOCH 1 - PROGRESS: at 22.60% examples, 122822 words/s, in_qsize 1, out_qsize 0
+2021-01-29 09:27:12,659 : INFO : EPOCH 1 - PROGRESS: at 24.42% examples, 124541 words/s, in_qsize 2, out_qsize 0
+2021-01-29 09:27:13,777 : INFO : EPOCH 1 - PROGRESS: at 26.15% examples, 125381 words/s, in_qsize 0, out_qsize 7
+2021-01-29 09:27:14,823 : INFO : EPOCH 1 - PROGRESS: at 27.95% examples, 126924 words/s, in_qsize 0, out_qsize 1
+2021-01-29 09:27:15,941 : INFO : EPOCH 1 - PROGRESS: at 29.38% examples, 126247 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:16,946 : INFO : EPOCH 1 - PROGRESS: at 31.20% examples, 127820 words/s, in_qsize 0, out_qsize 0
+2021-01-29 09:27:36,521 : INFO : collecting all words and their counts
+2021-01-29 09:27:36,521 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2021-01-29 09:27:36,564 : INFO : PROGRESS: at sentence #10000, processed 113911 words, keeping 7329 word types
+2021-01-29 09:27:36,611 : INFO : PROGRESS: at sentence #20000, processed 250003 words, keeping 10763 word types
+2021-01-29 09:27:36,659 : INFO : PROGRESS: at sentence #30000, processed 391088 words, keeping 13416 word types
+2021-01-29 09:27:36,707 : INFO : PROGRESS: at sentence #40000, processed 533654 words, keeping 15687 word types
+2021-01-29 09:27:36,757 : INFO : PROGRESS: at sentence #50000, processed 678044 words, keeping 17737 word types
+2021-01-29 09:27:36,807 : INFO : PROGRESS: at sentence #60000, processed 824531 words, keeping 19701 word types
+2021-01-29 09:27:36,855 : INFO : PROGRESS: at sentence #70000, processed 970553 words, keeping 21028 word types
+2021-01-29 09:27:36,906 : INFO : PROGRESS: at sentence #80000, processed 1118540 words, keeping 22365 word types
+2021-01-29 09:27:36,957 : INFO : PROGRESS: at sentence #90000, processed 1267190 words, keeping 23785 word types
+2021-01-29 09:27:37,011 : INFO : PROGRESS: at sentence #100000, processed 1416415 words, keeping 25014 word types
+2021-01-29 09:27:37,063 : INFO : PROGRESS: at sentence #110000, processed 1564334 words, keeping 26030 word types
+2021-01-29 09:27:37,112 : INFO : PROGRESS: at sentence #120000, processed 1712022 words, keeping 27077 word types
+2021-01-29 09:27:37,161 : INFO : PROGRESS: at sentence #130000, processed 1857067 words, keeping 27969 word types
+2021-01-29 09:27:37,212 : INFO : PROGRESS: at sentence #140000, processed 2003146 words, keeping 28968 word types
+2021-01-29 09:27:37,261 : INFO : PROGRESS: at sentence #150000, processed 2150038 words, keeping 29924 word types
+2021-01-29 09:27:37,311 : INFO : PROGRESS: at sentence #160000, processed 2298674 words, keeping 30904 word types
+2021-01-29 09:27:37,360 : INFO : PROGRESS: at sentence #170000, processed 2445207 words, keeping 31800 word types
+2021-01-29 09:27:37,410 : INFO : PROGRESS: at sentence #180000, processed 2591285 words, keeping 32630 word types
+2021-01-29 09:27:37,458 : INFO : PROGRESS: at sentence #190000, processed 2736984 words, keeping 33418 word types
+2021-01-29 09:27:37,507 : INFO : PROGRESS: at sentence #200000, processed 2884628 words, keeping 34288 word types
+2021-01-29 09:27:37,557 : INFO : PROGRESS: at sentence #210000, processed 3030816 words, keeping 35162 word types
+2021-01-29 09:27:37,606 : INFO : PROGRESS: at sentence #220000, processed 3176808 words, keeping 36042 word types
+2021-01-29 09:27:37,656 : INFO : PROGRESS: at sentence #230000, processed 3323461 words, keeping 36887 word types
+2021-01-29 09:27:37,706 : INFO : PROGRESS: at sentence #240000, processed 3470514 words, keeping 37669 word types
+2021-01-29 09:27:37,757 : INFO : PROGRESS: at sentence #250000, processed 3618495 words, keeping 38398 word types
+2021-01-29 09:27:37,806 : INFO : PROGRESS: at sentence #260000, processed 3763731 words, keeping 39072 word types
+2021-01-29 09:27:37,856 : INFO : PROGRESS: at sentence #270000, processed 3912184 words, keeping 39655 word types
+2021-01-29 09:27:37,908 : INFO : PROGRESS: at sentence #280000, processed 4058419 words, keeping 40336 word types
+2021-01-29 09:27:37,958 : INFO : PROGRESS: at sentence #290000, processed 4202501 words, keeping 41139 word types
+2021-01-29 09:27:38,010 : INFO : PROGRESS: at sentence #300000, processed 4350013 words, keeping 41891 word types
+2021-01-29 09:27:38,060 : INFO : PROGRESS: at sentence #310000, processed 4498547 words, keeping 42485 word types
+2021-01-29 09:27:38,109 : INFO : PROGRESS: at sentence #320000, processed 4642563 words, keeping 43078 word types
+2021-01-29 09:27:38,158 : INFO : PROGRESS: at sentence #330000, processed 4787571 words, keeping 43630 word types
+2021-01-29 09:27:38,211 : INFO : PROGRESS: at sentence #340000, processed 4935828 words, keeping 44250 word types
+2021-01-29 09:27:38,261 : INFO : PROGRESS: at sentence #350000, processed 5085213 words, keeping 44939 word types
+2021-01-29 09:27:38,312 : INFO : PROGRESS: at sentence #360000, processed 5235382 words, keeping 45536 word types
+2021-01-29 09:27:38,362 : INFO : PROGRESS: at sentence #370000, processed 5385169 words, keeping 46129 word types
+2021-01-29 09:27:38,413 : INFO : PROGRESS: at sentence #380000, processed 5533061 words, keeping 46695 word types
+2021-01-29 09:27:38,465 : INFO : PROGRESS: at sentence #390000, processed 5682895 words, keeping 47263 word types
+2021-01-29 09:27:38,516 : INFO : PROGRESS: at sentence #400000, processed 5832134 words, keeping 47919 word types
+2021-01-29 09:27:38,566 : INFO : PROGRESS: at sentence #410000, processed 5978722 words, keeping 48556 word types
+2021-01-29 09:27:38,616 : INFO : PROGRESS: at sentence #420000, processed 6124971 words, keeping 49077 word types
+2021-01-29 09:27:38,667 : INFO : PROGRESS: at sentence #430000, processed 6274003 words, keeping 49655 word types
+2021-01-29 09:27:38,718 : INFO : PROGRESS: at sentence #440000, processed 6425259 words, keeping 50135 word types
+2021-01-29 09:27:38,773 : INFO : PROGRESS: at sentence #450000, processed 6576771 words, keeping 50698 word types
+2021-01-29 09:27:38,834 : INFO : PROGRESS: at sentence #460000, processed 6727821 words, keeping 51214 word types
+2021-01-29 09:27:38,912 : INFO : PROGRESS: at sentence #470000, processed 6879391 words, keeping 51821 word types
+2021-01-29 09:27:38,977 : INFO : PROGRESS: at sentence #480000, processed 7029115 words, keeping 52339 word types
+2021-01-29 09:27:39,042 : INFO : PROGRESS: at sentence #490000, processed 7178898 words, keeping 52866 word types
+2021-01-29 09:27:39,102 : INFO : PROGRESS: at sentence #500000, processed 7329710 words, keeping 53417 word types
+2021-01-29 09:27:39,166 : INFO : PROGRESS: at sentence #510000, processed 7480838 words, keeping 53916 word types
+2021-01-29 09:27:39,224 : INFO : PROGRESS: at sentence #520000, processed 7630967 words, keeping 54474 word types
+2021-01-29 09:27:39,276 : INFO : PROGRESS: at sentence #530000, processed 7783014 words, keeping 55078 word types
+2021-01-29 09:27:39,326 : INFO : PROGRESS: at sentence #540000, processed 7932059 words, keeping 55630 word types
+2021-01-29 09:27:39,376 : INFO : PROGRESS: at sentence #550000, processed 8080041 words, keeping 56140 word types
+2021-01-29 09:27:39,427 : INFO : PROGRESS: at sentence #560000, processed 8229378 words, keeping 56592 word types
+2021-01-29 09:27:39,478 : INFO : PROGRESS: at sentence #570000, processed 8382273 words, keeping 57040 word types
+2021-01-29 09:27:39,527 : INFO : PROGRESS: at sentence #580000, processed 8530348 words, keeping 57527 word types
+2021-01-29 09:27:39,578 : INFO : PROGRESS: at sentence #590000, processed 8682050 words, keeping 57968 word types
+2021-01-29 09:27:39,628 : INFO : PROGRESS: at sentence #600000, processed 8832333 words, keeping 58356 word types
+2021-01-29 09:27:39,678 : INFO : PROGRESS: at sentence #610000, processed 8982019 words, keeping 58828 word types
+2021-01-29 09:27:39,728 : INFO : PROGRESS: at sentence #620000, processed 9130182 words, keeping 59244 word types
+2021-01-29 09:27:39,778 : INFO : PROGRESS: at sentence #630000, processed 9278479 words, keeping 59679 word types
+2021-01-29 09:27:39,830 : INFO : PROGRESS: at sentence #640000, processed 9426733 words, keeping 60186 word types
+2021-01-29 09:27:39,893 : INFO : PROGRESS: at sentence #650000, processed 9576738 words, keeping 60857 word types
+2021-01-29 09:27:39,951 : INFO : PROGRESS: at sentence #660000, processed 9727177 words, keeping 61435 word types
+2021-01-29 09:27:40,002 : INFO : PROGRESS: at sentence #670000, processed 9878069 words, keeping 61897 word types
+2021-01-29 09:27:40,053 : INFO : PROGRESS: at sentence #680000, processed 10028011 words, keeping 62381 word types
+2021-01-29 09:27:40,103 : INFO : PROGRESS: at sentence #690000, processed 10177758 words, keeping 62887 word types
+2021-01-29 09:27:40,154 : INFO : PROGRESS: at sentence #700000, processed 10330438 words, keeping 63358 word types
+2021-01-29 09:27:40,210 : INFO : PROGRESS: at sentence #710000, processed 10481486 words, keeping 63816 word types
+2021-01-29 09:27:40,261 : INFO : PROGRESS: at sentence #720000, processed 10632482 words, keeping 64319 word types
+2021-01-29 09:27:40,311 : INFO : PROGRESS: at sentence #730000, processed 10781524 words, keeping 64890 word types
+2021-01-29 09:27:40,362 : INFO : PROGRESS: at sentence #740000, processed 10932231 words, keeping 65288 word types
+2021-01-29 09:27:40,413 : INFO : PROGRESS: at sentence #750000, processed 11082451 words, keeping 65776 word types
+2021-01-29 09:27:40,464 : INFO : PROGRESS: at sentence #760000, processed 11234179 words, keeping 66201 word types
+2021-01-29 09:27:40,515 : INFO : PROGRESS: at sentence #770000, processed 11385525 words, keeping 66695 word types
+2021-01-29 09:27:40,566 : INFO : PROGRESS: at sentence #780000, processed 11534918 words, keeping 67215 word types
+2021-01-29 09:27:40,616 : INFO : PROGRESS: at sentence #790000, processed 11683683 words, keeping 67647 word types
+2021-01-29 09:27:40,666 : INFO : PROGRESS: at sentence #800000, processed 11830639 words, keeping 68131 word types
+2021-01-29 09:27:40,716 : INFO : PROGRESS: at sentence #810000, processed 11981756 words, keeping 68530 word types
+2021-01-29 09:27:40,767 : INFO : PROGRESS: at sentence #820000, processed 12133726 words, keeping 68979 word types
+2021-01-29 09:27:40,819 : INFO : PROGRESS: at sentence #830000, processed 12288174 words, keeping 69431 word types
+2021-01-29 09:27:40,870 : INFO : PROGRESS: at sentence #840000, processed 12441004 words, keeping 69843 word types
+2021-01-29 09:27:40,921 : INFO : PROGRESS: at sentence #850000, processed 12592513 words, keeping 70247 word types
+2021-01-29 09:27:40,972 : INFO : PROGRESS: at sentence #860000, processed 12744004 words, keeping 70604 word types
+2021-01-29 09:27:41,024 : INFO : PROGRESS: at sentence #870000, processed 12893870 words, keeping 71050 word types
+2021-01-29 09:27:41,075 : INFO : PROGRESS: at sentence #880000, processed 13046471 words, keeping 71793 word types
+2021-01-29 09:27:41,125 : INFO : PROGRESS: at sentence #890000, processed 13195630 words, keeping 72323 word types
+2021-01-29 09:27:41,178 : INFO : PROGRESS: at sentence #900000, processed 13344938 words, keeping 72726 word types
+2021-01-29 09:27:41,198 : INFO : collected 72898 word types from a corpus of 13404989 raw words and 903969 sentences
+2021-01-29 09:27:41,198 : INFO : Loading a fresh vocabulary
+2021-01-29 09:27:41,255 : INFO : effective_min_count=5 retains 21117 unique words (28% of original 72898, drops 51781)
+2021-01-29 09:27:41,255 : INFO : effective_min_count=5 leaves 13325808 word corpus (99% of original 13404989, drops 79181)
+2021-01-29 09:27:41,321 : INFO : deleting the raw counts dictionary of 72898 items
+2021-01-29 09:27:41,323 : INFO : sample=0.001 downsamples 58 most-common words
+2021-01-29 09:27:41,323 : INFO : downsampling leaves estimated 8995575 word corpus (67.5% of prior 13325808)
+2021-01-29 09:27:41,344 : INFO : constructing a huffman tree from 21117 words
+2021-01-29 09:27:41,922 : INFO : built huffman tree with maximum node depth 21
+2021-01-29 09:27:41,965 : INFO : estimated required memory for 21117 words and 300 dimensions: 90803100 bytes
+2021-01-29 09:27:41,965 : INFO : resetting layer weights
+2021-01-29 09:27:45,612 : INFO : training model with 3 workers on 21117 vocabulary and 300 features, using sg=1 hs=1 sample=0.001 negative=5 window=5
+2021-01-29 09:27:46,692 : INFO : EPOCH 1 - PROGRESS: at 1.50% examples, 102710 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:27:47,784 : INFO : EPOCH 1 - PROGRESS: at 2.91% examples, 108662 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:27:48,806 : INFO : EPOCH 1 - PROGRESS: at 4.32% examples, 112904 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:49,810 : INFO : EPOCH 1 - PROGRESS: at 5.62% examples, 114001 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:50,861 : INFO : EPOCH 1 - PROGRESS: at 6.90% examples, 113648 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:51,868 : INFO : EPOCH 1 - PROGRESS: at 8.26% examples, 114799 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:52,954 : INFO : EPOCH 1 - PROGRESS: at 9.60% examples, 114421 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:53,990 : INFO : EPOCH 1 - PROGRESS: at 10.93% examples, 114871 words/s, in_qsize 6, out_qsize 1
+2021-01-29 09:27:55,063 : INFO : EPOCH 1 - PROGRESS: at 12.35% examples, 115453 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:27:56,085 : INFO : EPOCH 1 - PROGRESS: at 13.70% examples, 115832 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:57,141 : INFO : EPOCH 1 - PROGRESS: at 15.15% examples, 116330 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:58,165 : INFO : EPOCH 1 - PROGRESS: at 16.51% examples, 116572 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:27:59,186 : INFO : EPOCH 1 - PROGRESS: at 17.77% examples, 116320 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:00,275 : INFO : EPOCH 1 - PROGRESS: at 19.20% examples, 116454 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:01,295 : INFO : EPOCH 1 - PROGRESS: at 20.64% examples, 117062 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:02,300 : INFO : EPOCH 1 - PROGRESS: at 21.85% examples, 116436 words/s, in_qsize 6, out_qsize 1
+2021-01-29 09:28:03,327 : INFO : EPOCH 1 - PROGRESS: at 23.28% examples, 116874 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:04,339 : INFO : EPOCH 1 - PROGRESS: at 24.64% examples, 116977 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:05,341 : INFO : EPOCH 1 - PROGRESS: at 26.00% examples, 117175 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:06,407 : INFO : EPOCH 1 - PROGRESS: at 27.35% examples, 117005 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:07,425 : INFO : EPOCH 1 - PROGRESS: at 28.71% examples, 117111 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:08,498 : INFO : EPOCH 1 - PROGRESS: at 30.12% examples, 117188 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:09,518 : INFO : EPOCH 1 - PROGRESS: at 31.50% examples, 117237 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:10,574 : INFO : EPOCH 1 - PROGRESS: at 32.93% examples, 117400 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:28:11,592 : INFO : EPOCH 1 - PROGRESS: at 34.35% examples, 117669 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:12,724 : INFO : EPOCH 1 - PROGRESS: at 35.73% examples, 117183 words/s, in_qsize 5, out_qsize 2
+2021-01-29 09:28:13,727 : INFO : EPOCH 1 - PROGRESS: at 37.17% examples, 117522 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:14,745 : INFO : EPOCH 1 - PROGRESS: at 38.50% examples, 117586 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:15,746 : INFO : EPOCH 1 - PROGRESS: at 39.75% examples, 117490 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:16,864 : INFO : EPOCH 1 - PROGRESS: at 41.16% examples, 117405 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:28:17,868 : INFO : EPOCH 1 - PROGRESS: at 42.57% examples, 117707 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:18,905 : INFO : EPOCH 1 - PROGRESS: at 43.82% examples, 117465 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:19,978 : INFO : EPOCH 1 - PROGRESS: at 45.25% examples, 117491 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:28:20,996 : INFO : EPOCH 1 - PROGRESS: at 46.69% examples, 117688 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:22,008 : INFO : EPOCH 1 - PROGRESS: at 48.01% examples, 117694 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:23,123 : INFO : EPOCH 1 - PROGRESS: at 49.40% examples, 117572 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:24,255 : INFO : EPOCH 1 - PROGRESS: at 50.86% examples, 117577 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:25,278 : INFO : EPOCH 1 - PROGRESS: at 52.25% examples, 117755 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:26,313 : INFO : EPOCH 1 - PROGRESS: at 53.58% examples, 117732 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:27,434 : INFO : EPOCH 1 - PROGRESS: at 54.98% examples, 117626 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:28,466 : INFO : EPOCH 1 - PROGRESS: at 56.36% examples, 117758 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:29,538 : INFO : EPOCH 1 - PROGRESS: at 57.76% examples, 117776 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:28:30,549 : INFO : EPOCH 1 - PROGRESS: at 58.93% examples, 117515 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:31,585 : INFO : EPOCH 1 - PROGRESS: at 60.27% examples, 117465 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:32,600 : INFO : EPOCH 1 - PROGRESS: at 61.61% examples, 117483 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:28:33,623 : INFO : EPOCH 1 - PROGRESS: at 62.91% examples, 117483 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:34,693 : INFO : EPOCH 1 - PROGRESS: at 64.32% examples, 117509 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:35,746 : INFO : EPOCH 1 - PROGRESS: at 65.72% examples, 117578 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:28:36,831 : INFO : EPOCH 1 - PROGRESS: at 67.11% examples, 117567 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:28:37,854 : INFO : EPOCH 1 - PROGRESS: at 68.45% examples, 117569 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:38,961 : INFO : EPOCH 1 - PROGRESS: at 69.87% examples, 117501 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:40,002 : INFO : EPOCH 1 - PROGRESS: at 71.28% examples, 117577 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:41,010 : INFO : EPOCH 1 - PROGRESS: at 72.61% examples, 117602 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:42,030 : INFO : EPOCH 1 - PROGRESS: at 73.85% examples, 117454 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:43,160 : INFO : EPOCH 1 - PROGRESS: at 75.32% examples, 117444 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:44,179 : INFO : EPOCH 1 - PROGRESS: at 76.72% examples, 117558 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:45,232 : INFO : EPOCH 1 - PROGRESS: at 78.02% examples, 117496 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:46,307 : INFO : EPOCH 1 - PROGRESS: at 79.34% examples, 117391 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:47,426 : INFO : EPOCH 1 - PROGRESS: at 80.75% examples, 117314 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:48,461 : INFO : EPOCH 1 - PROGRESS: at 82.15% examples, 117393 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:49,491 : INFO : EPOCH 1 - PROGRESS: at 83.24% examples, 117060 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:50,535 : INFO : EPOCH 1 - PROGRESS: at 84.41% examples, 116810 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:28:51,624 : INFO : EPOCH 1 - PROGRESS: at 85.73% examples, 116679 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:52,632 : INFO : EPOCH 1 - PROGRESS: at 87.14% examples, 116783 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:53,690 : INFO : EPOCH 1 - PROGRESS: at 88.49% examples, 116724 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:54,705 : INFO : EPOCH 1 - PROGRESS: at 89.88% examples, 116830 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:55,711 : INFO : EPOCH 1 - PROGRESS: at 91.12% examples, 116767 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:56,714 : INFO : EPOCH 1 - PROGRESS: at 92.41% examples, 116804 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:57,786 : INFO : EPOCH 1 - PROGRESS: at 93.57% examples, 116552 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:58,881 : INFO : EPOCH 1 - PROGRESS: at 94.74% examples, 116267 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:28:59,893 : INFO : EPOCH 1 - PROGRESS: at 95.91% examples, 116122 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:00,916 : INFO : EPOCH 1 - PROGRESS: at 97.01% examples, 115876 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:02,008 : INFO : EPOCH 1 - PROGRESS: at 98.18% examples, 115608 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:03,090 : INFO : EPOCH 1 - PROGRESS: at 99.37% examples, 115367 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:03,494 : INFO : worker thread finished; awaiting finish of 2 more threads
+2021-01-29 09:29:03,511 : INFO : worker thread finished; awaiting finish of 1 more threads
+2021-01-29 09:29:03,535 : INFO : worker thread finished; awaiting finish of 0 more threads
+2021-01-29 09:29:03,535 : INFO : EPOCH - 1 : training on 13404989 raw words (8995253 effective words) took 77.9s, 115439 effective words/s
+2021-01-29 09:29:04,576 : INFO : EPOCH 2 - PROGRESS: at 1.50% examples, 106426 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:05,581 : INFO : EPOCH 2 - PROGRESS: at 2.83% examples, 111870 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:06,597 : INFO : EPOCH 2 - PROGRESS: at 4.16% examples, 113275 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:07,646 : INFO : EPOCH 2 - PROGRESS: at 5.54% examples, 114643 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:08,691 : INFO : EPOCH 2 - PROGRESS: at 6.83% examples, 114385 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:09,712 : INFO : EPOCH 2 - PROGRESS: at 8.26% examples, 116259 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:10,786 : INFO : EPOCH 2 - PROGRESS: at 9.60% examples, 115852 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:11,875 : INFO : EPOCH 2 - PROGRESS: at 11.01% examples, 116193 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:12,879 : INFO : EPOCH 2 - PROGRESS: at 12.35% examples, 116799 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:13,920 : INFO : EPOCH 2 - PROGRESS: at 13.63% examples, 116189 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:14,960 : INFO : EPOCH 2 - PROGRESS: at 15.07% examples, 116824 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:15,974 : INFO : EPOCH 2 - PROGRESS: at 16.43% examples, 117103 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:16,982 : INFO : EPOCH 2 - PROGRESS: at 17.70% examples, 116939 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:18,054 : INFO : EPOCH 2 - PROGRESS: at 19.12% examples, 117183 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:19,059 : INFO : EPOCH 2 - PROGRESS: at 20.49% examples, 117410 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:20,157 : INFO : EPOCH 2 - PROGRESS: at 21.92% examples, 117313 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:21,162 : INFO : EPOCH 2 - PROGRESS: at 23.28% examples, 117478 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:22,191 : INFO : EPOCH 2 - PROGRESS: at 24.64% examples, 117444 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:23,260 : INFO : EPOCH 2 - PROGRESS: at 26.07% examples, 117568 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:24,287 : INFO : EPOCH 2 - PROGRESS: at 27.42% examples, 117593 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:25,306 : INFO : EPOCH 2 - PROGRESS: at 28.78% examples, 117654 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:26,376 : INFO : EPOCH 2 - PROGRESS: at 30.19% examples, 117718 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:27,425 : INFO : EPOCH 2 - PROGRESS: at 31.66% examples, 117890 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:28,476 : INFO : EPOCH 2 - PROGRESS: at 33.01% examples, 117774 words/s, in_qsize 5, out_qsize 1
+2021-01-29 09:29:29,483 : INFO : EPOCH 2 - PROGRESS: at 34.43% examples, 118082 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:30,498 : INFO : EPOCH 2 - PROGRESS: at 35.81% examples, 118091 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:31,510 : INFO : EPOCH 2 - PROGRESS: at 37.24% examples, 118358 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:32,520 : INFO : EPOCH 2 - PROGRESS: at 38.50% examples, 118186 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:33,553 : INFO : EPOCH 2 - PROGRESS: at 39.83% examples, 118172 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:34,659 : INFO : EPOCH 2 - PROGRESS: at 41.24% examples, 118103 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:35,710 : INFO : EPOCH 2 - PROGRESS: at 42.64% examples, 118210 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:36,731 : INFO : EPOCH 2 - PROGRESS: at 43.97% examples, 118206 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:37,773 : INFO : EPOCH 2 - PROGRESS: at 45.33% examples, 118119 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:29:38,807 : INFO : EPOCH 2 - PROGRESS: at 46.76% examples, 118245 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:39,924 : INFO : EPOCH 2 - PROGRESS: at 48.23% examples, 118257 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:40,944 : INFO : EPOCH 2 - PROGRESS: at 49.62% examples, 118423 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:41,961 : INFO : EPOCH 2 - PROGRESS: at 50.86% examples, 118240 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:42,962 : INFO : EPOCH 2 - PROGRESS: at 52.25% examples, 118470 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:44,025 : INFO : EPOCH 2 - PROGRESS: at 53.58% examples, 118340 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:45,077 : INFO : EPOCH 2 - PROGRESS: at 54.98% examples, 118412 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:46,098 : INFO : EPOCH 2 - PROGRESS: at 56.29% examples, 118396 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:47,117 : INFO : EPOCH 2 - PROGRESS: at 57.61% examples, 118389 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:48,154 : INFO : EPOCH 2 - PROGRESS: at 59.00% examples, 118477 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:49,167 : INFO : EPOCH 2 - PROGRESS: at 60.27% examples, 118322 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:50,175 : INFO : EPOCH 2 - PROGRESS: at 61.68% examples, 118478 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:51,187 : INFO : EPOCH 2 - PROGRESS: at 62.99% examples, 118480 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:52,232 : INFO : EPOCH 2 - PROGRESS: at 64.32% examples, 118417 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:53,271 : INFO : EPOCH 2 - PROGRESS: at 65.64% examples, 118365 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:54,278 : INFO : EPOCH 2 - PROGRESS: at 66.97% examples, 118391 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:55,320 : INFO : EPOCH 2 - PROGRESS: at 68.38% examples, 118468 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:56,350 : INFO : EPOCH 2 - PROGRESS: at 69.72% examples, 118428 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:57,352 : INFO : EPOCH 2 - PROGRESS: at 71.13% examples, 118568 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:29:58,403 : INFO : EPOCH 2 - PROGRESS: at 72.39% examples, 118363 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:29:59,521 : INFO : EPOCH 2 - PROGRESS: at 73.78% examples, 118239 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:00,580 : INFO : EPOCH 2 - PROGRESS: at 75.18% examples, 118247 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:01,600 : INFO : EPOCH 2 - PROGRESS: at 76.50% examples, 118232 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:02,703 : INFO : EPOCH 2 - PROGRESS: at 77.88% examples, 118171 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:03,723 : INFO : EPOCH 2 - PROGRESS: at 79.27% examples, 118270 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:04,727 : INFO : EPOCH 2 - PROGRESS: at 80.52% examples, 118180 words/s, in_qsize 5, out_qsize 1
+2021-01-29 09:30:05,785 : INFO : EPOCH 2 - PROGRESS: at 81.78% examples, 117989 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:06,803 : INFO : EPOCH 2 - PROGRESS: at 83.10% examples, 117983 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:07,849 : INFO : EPOCH 2 - PROGRESS: at 84.48% examples, 118022 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:08,882 : INFO : EPOCH 2 - PROGRESS: at 85.80% examples, 117976 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:09,918 : INFO : EPOCH 2 - PROGRESS: at 87.22% examples, 118012 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:11,004 : INFO : EPOCH 2 - PROGRESS: at 88.64% examples, 117985 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:12,016 : INFO : EPOCH 2 - PROGRESS: at 90.03% examples, 118082 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:13,068 : INFO : EPOCH 2 - PROGRESS: at 91.33% examples, 118015 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:14,069 : INFO : EPOCH 2 - PROGRESS: at 92.55% examples, 117946 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:15,103 : INFO : EPOCH 2 - PROGRESS: at 93.94% examples, 118015 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:16,114 : INFO : EPOCH 2 - PROGRESS: at 95.25% examples, 118029 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:17,137 : INFO : EPOCH 2 - PROGRESS: at 96.57% examples, 118020 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:18,207 : INFO : EPOCH 2 - PROGRESS: at 97.96% examples, 118019 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:19,254 : INFO : EPOCH 2 - PROGRESS: at 99.37% examples, 118050 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:19,638 : INFO : worker thread finished; awaiting finish of 2 more threads
+2021-01-29 09:30:19,674 : INFO : worker thread finished; awaiting finish of 1 more threads
+2021-01-29 09:30:19,678 : INFO : worker thread finished; awaiting finish of 0 more threads
+2021-01-29 09:30:19,678 : INFO : EPOCH - 2 : training on 13404989 raw words (8995509 effective words) took 76.1s, 118141 effective words/s
+2021-01-29 09:30:20,682 : INFO : EPOCH 3 - PROGRESS: at 1.50% examples, 110477 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:21,722 : INFO : EPOCH 3 - PROGRESS: at 2.91% examples, 115490 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:22,769 : INFO : EPOCH 3 - PROGRESS: at 4.24% examples, 114521 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:23,804 : INFO : EPOCH 3 - PROGRESS: at 5.62% examples, 116070 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:24,808 : INFO : EPOCH 3 - PROGRESS: at 6.97% examples, 117677 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:25,831 : INFO : EPOCH 3 - PROGRESS: at 8.26% examples, 116757 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:26,901 : INFO : EPOCH 3 - PROGRESS: at 9.67% examples, 117268 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:27,936 : INFO : EPOCH 3 - PROGRESS: at 11.01% examples, 117342 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:28,953 : INFO : EPOCH 3 - PROGRESS: at 12.35% examples, 117653 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:30,011 : INFO : EPOCH 3 - PROGRESS: at 13.70% examples, 117393 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:31,014 : INFO : EPOCH 3 - PROGRESS: at 15.15% examples, 118315 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:32,065 : INFO : EPOCH 3 - PROGRESS: at 16.43% examples, 117592 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:33,075 : INFO : EPOCH 3 - PROGRESS: at 17.70% examples, 117377 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:34,137 : INFO : EPOCH 3 - PROGRESS: at 19.13% examples, 117656 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:35,151 : INFO : EPOCH 3 - PROGRESS: at 20.57% examples, 118238 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:36,161 : INFO : EPOCH 3 - PROGRESS: at 21.85% examples, 117899 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:37,196 : INFO : EPOCH 3 - PROGRESS: at 23.28% examples, 118201 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:38,290 : INFO : EPOCH 3 - PROGRESS: at 24.72% examples, 118079 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:39,296 : INFO : EPOCH 3 - PROGRESS: at 26.07% examples, 118198 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:40,340 : INFO : EPOCH 3 - PROGRESS: at 27.49% examples, 118416 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:41,345 : INFO : EPOCH 3 - PROGRESS: at 28.86% examples, 118538 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:42,390 : INFO : EPOCH 3 - PROGRESS: at 30.12% examples, 118100 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:43,404 : INFO : EPOCH 3 - PROGRESS: at 31.58% examples, 118425 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:44,500 : INFO : EPOCH 3 - PROGRESS: at 33.01% examples, 118345 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:45,503 : INFO : EPOCH 3 - PROGRESS: at 34.43% examples, 118633 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:30:46,506 : INFO : EPOCH 3 - PROGRESS: at 35.81% examples, 118671 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:47,548 : INFO : EPOCH 3 - PROGRESS: at 37.17% examples, 118554 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:48,557 : INFO : EPOCH 3 - PROGRESS: at 38.50% examples, 118620 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:49,680 : INFO : EPOCH 3 - PROGRESS: at 39.90% examples, 118454 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:50,722 : INFO : EPOCH 3 - PROGRESS: at 41.31% examples, 118607 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:51,736 : INFO : EPOCH 3 - PROGRESS: at 42.64% examples, 118627 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:52,862 : INFO : EPOCH 3 - PROGRESS: at 44.05% examples, 118429 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:53,876 : INFO : EPOCH 3 - PROGRESS: at 45.48% examples, 118621 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:54,936 : INFO : EPOCH 3 - PROGRESS: at 46.91% examples, 118644 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:56,008 : INFO : EPOCH 3 - PROGRESS: at 48.30% examples, 118609 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:57,160 : INFO : EPOCH 3 - PROGRESS: at 49.76% examples, 118524 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:58,202 : INFO : EPOCH 3 - PROGRESS: at 51.15% examples, 118596 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:30:59,268 : INFO : EPOCH 3 - PROGRESS: at 52.54% examples, 118623 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:00,344 : INFO : EPOCH 3 - PROGRESS: at 53.95% examples, 118617 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:01,386 : INFO : EPOCH 3 - PROGRESS: at 55.27% examples, 118542 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:02,399 : INFO : EPOCH 3 - PROGRESS: at 56.59% examples, 118548 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:03,401 : INFO : EPOCH 3 - PROGRESS: at 57.91% examples, 118580 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:04,407 : INFO : EPOCH 3 - PROGRESS: at 59.22% examples, 118598 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:05,471 : INFO : EPOCH 3 - PROGRESS: at 60.64% examples, 118600 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:06,527 : INFO : EPOCH 3 - PROGRESS: at 62.05% examples, 118633 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:07,543 : INFO : EPOCH 3 - PROGRESS: at 63.36% examples, 118623 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:08,547 : INFO : EPOCH 3 - PROGRESS: at 64.76% examples, 118791 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:09,562 : INFO : EPOCH 3 - PROGRESS: at 66.01% examples, 118653 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:10,586 : INFO : EPOCH 3 - PROGRESS: at 67.33% examples, 118637 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:11,604 : INFO : EPOCH 3 - PROGRESS: at 68.67% examples, 118628 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:12,642 : INFO : EPOCH 3 - PROGRESS: at 70.10% examples, 118689 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:13,650 : INFO : EPOCH 3 - PROGRESS: at 71.35% examples, 118572 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:14,694 : INFO : EPOCH 3 - PROGRESS: at 72.75% examples, 118627 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:15,696 : INFO : EPOCH 3 - PROGRESS: at 74.14% examples, 118733 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:16,748 : INFO : EPOCH 3 - PROGRESS: at 75.47% examples, 118632 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:17,763 : INFO : EPOCH 3 - PROGRESS: at 76.87% examples, 118739 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:18,767 : INFO : EPOCH 3 - PROGRESS: at 78.17% examples, 118749 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:19,805 : INFO : EPOCH 3 - PROGRESS: at 79.42% examples, 118589 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:20,856 : INFO : EPOCH 3 - PROGRESS: at 80.82% examples, 118622 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:31:21,866 : INFO : EPOCH 3 - PROGRESS: at 82.22% examples, 118726 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:22,866 : INFO : EPOCH 3 - PROGRESS: at 83.47% examples, 118636 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:23,922 : INFO : EPOCH 3 - PROGRESS: at 84.85% examples, 118642 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:24,924 : INFO : EPOCH 3 - PROGRESS: at 86.18% examples, 118640 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:25,929 : INFO : EPOCH 3 - PROGRESS: at 87.59% examples, 118730 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:26,999 : INFO : EPOCH 3 - PROGRESS: at 89.00% examples, 118716 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:28,090 : INFO : EPOCH 3 - PROGRESS: at 90.40% examples, 118671 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:29,109 : INFO : EPOCH 3 - PROGRESS: at 91.76% examples, 118748 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:30,208 : INFO : EPOCH 3 - PROGRESS: at 93.13% examples, 118697 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:31,273 : INFO : EPOCH 3 - PROGRESS: at 94.52% examples, 118704 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:32,314 : INFO : EPOCH 3 - PROGRESS: at 95.91% examples, 118756 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:33,355 : INFO : EPOCH 3 - PROGRESS: at 97.22% examples, 118705 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:34,387 : INFO : EPOCH 3 - PROGRESS: at 98.63% examples, 118754 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:35,327 : INFO : worker thread finished; awaiting finish of 2 more threads
+2021-01-29 09:31:35,358 : INFO : worker thread finished; awaiting finish of 1 more threads
+2021-01-29 09:31:35,381 : INFO : worker thread finished; awaiting finish of 0 more threads
+2021-01-29 09:31:35,381 : INFO : EPOCH - 3 : training on 13404989 raw words (8995333 effective words) took 75.7s, 118825 effective words/s
+2021-01-29 09:31:36,400 : INFO : EPOCH 4 - PROGRESS: at 1.50% examples, 109162 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:31:37,407 : INFO : EPOCH 4 - PROGRESS: at 2.91% examples, 116671 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:38,442 : INFO : EPOCH 4 - PROGRESS: at 4.24% examples, 115732 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:39,465 : INFO : EPOCH 4 - PROGRESS: at 5.62% examples, 117302 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:40,495 : INFO : EPOCH 4 - PROGRESS: at 6.83% examples, 115464 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:41,515 : INFO : EPOCH 4 - PROGRESS: at 8.18% examples, 116085 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:42,543 : INFO : EPOCH 4 - PROGRESS: at 9.60% examples, 117370 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:43,556 : INFO : EPOCH 4 - PROGRESS: at 10.86% examples, 116947 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:44,619 : INFO : EPOCH 4 - PROGRESS: at 12.20% examples, 116684 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:45,621 : INFO : EPOCH 4 - PROGRESS: at 13.55% examples, 117179 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:46,670 : INFO : EPOCH 4 - PROGRESS: at 15.00% examples, 117622 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:47,685 : INFO : EPOCH 4 - PROGRESS: at 16.36% examples, 117825 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:48,735 : INFO : EPOCH 4 - PROGRESS: at 17.62% examples, 117215 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:49,785 : INFO : EPOCH 4 - PROGRESS: at 19.05% examples, 117625 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:50,866 : INFO : EPOCH 4 - PROGRESS: at 20.49% examples, 117694 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:51,879 : INFO : EPOCH 4 - PROGRESS: at 21.85% examples, 117798 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:52,899 : INFO : EPOCH 4 - PROGRESS: at 23.21% examples, 117827 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:53,908 : INFO : EPOCH 4 - PROGRESS: at 24.64% examples, 118277 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:54,995 : INFO : EPOCH 4 - PROGRESS: at 26.00% examples, 117894 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:56,056 : INFO : EPOCH 4 - PROGRESS: at 27.42% examples, 118046 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:57,087 : INFO : EPOCH 4 - PROGRESS: at 28.78% examples, 118028 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:31:58,233 : INFO : EPOCH 4 - PROGRESS: at 30.27% examples, 117977 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:31:59,237 : INFO : EPOCH 4 - PROGRESS: at 31.74% examples, 118361 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:00,259 : INFO : EPOCH 4 - PROGRESS: at 33.01% examples, 118098 words/s, in_qsize 5, out_qsize 1
+2021-01-29 09:32:01,371 : INFO : EPOCH 4 - PROGRESS: at 34.51% examples, 118172 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:02,434 : INFO : EPOCH 4 - PROGRESS: at 35.96% examples, 118218 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:03,461 : INFO : EPOCH 4 - PROGRESS: at 37.39% examples, 118420 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:04,514 : INFO : EPOCH 4 - PROGRESS: at 38.72% examples, 118312 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:05,524 : INFO : EPOCH 4 - PROGRESS: at 40.05% examples, 118384 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:06,548 : INFO : EPOCH 4 - PROGRESS: at 41.31% examples, 118185 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:32:07,570 : INFO : EPOCH 4 - PROGRESS: at 42.72% examples, 118396 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:08,681 : INFO : EPOCH 4 - PROGRESS: at 44.12% examples, 118265 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:09,808 : INFO : EPOCH 4 - PROGRESS: at 45.63% examples, 118267 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:10,814 : INFO : EPOCH 4 - PROGRESS: at 46.98% examples, 118298 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:11,825 : INFO : EPOCH 4 - PROGRESS: at 48.30% examples, 118290 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:12,840 : INFO : EPOCH 4 - PROGRESS: at 49.62% examples, 118288 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:13,869 : INFO : EPOCH 4 - PROGRESS: at 50.93% examples, 118236 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:14,909 : INFO : EPOCH 4 - PROGRESS: at 52.25% examples, 118184 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:15,951 : INFO : EPOCH 4 - PROGRESS: at 53.65% examples, 118290 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:16,981 : INFO : EPOCH 4 - PROGRESS: at 54.98% examples, 118262 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:18,018 : INFO : EPOCH 4 - PROGRESS: at 56.29% examples, 118204 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:19,035 : INFO : EPOCH 4 - PROGRESS: at 57.61% examples, 118203 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:20,093 : INFO : EPOCH 4 - PROGRESS: at 59.00% examples, 118242 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:21,103 : INFO : EPOCH 4 - PROGRESS: at 60.42% examples, 118388 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:22,127 : INFO : EPOCH 4 - PROGRESS: at 61.76% examples, 118360 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:23,129 : INFO : EPOCH 4 - PROGRESS: at 62.99% examples, 118248 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:24,136 : INFO : EPOCH 4 - PROGRESS: at 64.32% examples, 118274 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:25,138 : INFO : EPOCH 4 - PROGRESS: at 65.64% examples, 118318 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:26,166 : INFO : EPOCH 4 - PROGRESS: at 66.97% examples, 118292 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:32:27,214 : INFO : EPOCH 4 - PROGRESS: at 68.38% examples, 118356 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:28,248 : INFO : EPOCH 4 - PROGRESS: at 69.72% examples, 118313 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:29,283 : INFO : EPOCH 4 - PROGRESS: at 71.13% examples, 118383 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:30,325 : INFO : EPOCH 4 - PROGRESS: at 72.46% examples, 118324 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:31,432 : INFO : EPOCH 4 - PROGRESS: at 73.92% examples, 118345 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:32,468 : INFO : EPOCH 4 - PROGRESS: at 75.32% examples, 118402 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:33,543 : INFO : EPOCH 4 - PROGRESS: at 76.72% examples, 118390 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:34,616 : INFO : EPOCH 4 - PROGRESS: at 78.10% examples, 118380 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:35,623 : INFO : EPOCH 4 - PROGRESS: at 79.49% examples, 118501 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:36,635 : INFO : EPOCH 4 - PROGRESS: at 80.83% examples, 118500 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:37,722 : INFO : EPOCH 4 - PROGRESS: at 82.22% examples, 118460 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:38,773 : INFO : EPOCH 4 - PROGRESS: at 83.62% examples, 118482 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:39,798 : INFO : EPOCH 4 - PROGRESS: at 84.92% examples, 118447 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:40,822 : INFO : EPOCH 4 - PROGRESS: at 86.33% examples, 118514 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:41,874 : INFO : EPOCH 4 - PROGRESS: at 87.74% examples, 118520 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:42,941 : INFO : EPOCH 4 - PROGRESS: at 89.15% examples, 118513 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:43,985 : INFO : EPOCH 4 - PROGRESS: at 90.54% examples, 118549 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:45,018 : INFO : EPOCH 4 - PROGRESS: at 91.83% examples, 118510 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:46,049 : INFO : EPOCH 4 - PROGRESS: at 93.20% examples, 118576 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:47,078 : INFO : EPOCH 4 - PROGRESS: at 94.52% examples, 118552 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:48,091 : INFO : EPOCH 4 - PROGRESS: at 95.77% examples, 118466 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:49,097 : INFO : EPOCH 4 - PROGRESS: at 97.15% examples, 118566 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:50,183 : INFO : EPOCH 4 - PROGRESS: at 98.56% examples, 118531 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:51,182 : INFO : worker thread finished; awaiting finish of 2 more threads
+2021-01-29 09:32:51,196 : INFO : EPOCH 4 - PROGRESS: at 99.96% examples, 118607 words/s, in_qsize 1, out_qsize 1
+2021-01-29 09:32:51,196 : INFO : worker thread finished; awaiting finish of 1 more threads
+2021-01-29 09:32:51,200 : INFO : worker thread finished; awaiting finish of 0 more threads
+2021-01-29 09:32:51,200 : INFO : EPOCH - 4 : training on 13404989 raw words (8996125 effective words) took 75.8s, 118654 effective words/s
+2021-01-29 09:32:52,246 : INFO : EPOCH 5 - PROGRESS: at 1.58% examples, 112613 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:53,275 : INFO : EPOCH 5 - PROGRESS: at 2.91% examples, 113670 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:54,368 : INFO : EPOCH 5 - PROGRESS: at 4.32% examples, 113941 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:55,431 : INFO : EPOCH 5 - PROGRESS: at 5.69% examples, 114831 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:56,567 : INFO : EPOCH 5 - PROGRESS: at 7.13% examples, 114983 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:57,607 : INFO : EPOCH 5 - PROGRESS: at 8.56% examples, 116407 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:32:58,640 : INFO : EPOCH 5 - PROGRESS: at 9.90% examples, 116664 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:32:59,675 : INFO : EPOCH 5 - PROGRESS: at 11.23% examples, 116833 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:00,707 : INFO : EPOCH 5 - PROGRESS: at 12.50% examples, 116253 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:01,766 : INFO : EPOCH 5 - PROGRESS: at 13.93% examples, 116763 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:02,817 : INFO : EPOCH 5 - PROGRESS: at 15.30% examples, 116668 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:03,877 : INFO : EPOCH 5 - PROGRESS: at 16.73% examples, 117073 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:04,919 : INFO : EPOCH 5 - PROGRESS: at 18.00% examples, 116632 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:05,965 : INFO : EPOCH 5 - PROGRESS: at 19.43% examples, 117049 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:07,000 : INFO : EPOCH 5 - PROGRESS: at 20.80% examples, 117081 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:08,018 : INFO : EPOCH 5 - PROGRESS: at 22.15% examples, 117160 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:09,029 : INFO : EPOCH 5 - PROGRESS: at 23.50% examples, 117284 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:10,036 : INFO : EPOCH 5 - PROGRESS: at 24.95% examples, 117768 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:11,136 : INFO : EPOCH 5 - PROGRESS: at 26.30% examples, 117351 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:33:12,189 : INFO : EPOCH 5 - PROGRESS: at 27.72% examples, 117557 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:13,258 : INFO : EPOCH 5 - PROGRESS: at 29.09% examples, 117358 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:14,272 : INFO : EPOCH 5 - PROGRESS: at 30.50% examples, 117717 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:15,290 : INFO : EPOCH 5 - PROGRESS: at 31.81% examples, 117479 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:16,339 : INFO : EPOCH 5 - PROGRESS: at 33.23% examples, 117654 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:17,368 : INFO : EPOCH 5 - PROGRESS: at 34.58% examples, 117607 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:18,425 : INFO : EPOCH 5 - PROGRESS: at 36.04% examples, 117701 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:19,514 : INFO : EPOCH 5 - PROGRESS: at 37.46% examples, 117665 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:20,590 : INFO : EPOCH 5 - PROGRESS: at 38.87% examples, 117724 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:21,617 : INFO : EPOCH 5 - PROGRESS: at 40.19% examples, 117754 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:22,659 : INFO : EPOCH 5 - PROGRESS: at 41.53% examples, 117722 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:23,679 : INFO : EPOCH 5 - PROGRESS: at 42.87% examples, 117744 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:24,761 : INFO : EPOCH 5 - PROGRESS: at 44.27% examples, 117744 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:25,775 : INFO : EPOCH 5 - PROGRESS: at 45.63% examples, 117762 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:26,795 : INFO : EPOCH 5 - PROGRESS: at 47.06% examples, 117933 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:27,816 : INFO : EPOCH 5 - PROGRESS: at 48.38% examples, 117906 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:28,826 : INFO : EPOCH 5 - PROGRESS: at 49.62% examples, 117757 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:29,922 : INFO : EPOCH 5 - PROGRESS: at 51.01% examples, 117697 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:30,966 : INFO : EPOCH 5 - PROGRESS: at 52.39% examples, 117805 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:32,082 : INFO : EPOCH 5 - PROGRESS: at 53.80% examples, 117710 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:33,087 : INFO : EPOCH 5 - PROGRESS: at 55.19% examples, 117927 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:34,183 : INFO : EPOCH 5 - PROGRESS: at 56.51% examples, 117715 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:35,196 : INFO : EPOCH 5 - PROGRESS: at 57.83% examples, 117737 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:36,311 : INFO : EPOCH 5 - PROGRESS: at 59.30% examples, 117780 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:37,430 : INFO : EPOCH 5 - PROGRESS: at 60.79% examples, 117808 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:38,449 : INFO : EPOCH 5 - PROGRESS: at 62.19% examples, 117951 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:39,506 : INFO : EPOCH 5 - PROGRESS: at 63.51% examples, 117860 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:40,517 : INFO : EPOCH 5 - PROGRESS: at 64.84% examples, 117885 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:41,575 : INFO : EPOCH 5 - PROGRESS: at 66.23% examples, 117929 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:33:42,585 : INFO : EPOCH 5 - PROGRESS: at 67.56% examples, 117962 words/s, in_qsize 5, out_qsize 1
+2021-01-29 09:33:43,608 : INFO : EPOCH 5 - PROGRESS: at 68.90% examples, 117951 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:44,640 : INFO : EPOCH 5 - PROGRESS: at 70.32% examples, 118040 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:45,730 : INFO : EPOCH 5 - PROGRESS: at 71.72% examples, 118002 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:46,776 : INFO : EPOCH 5 - PROGRESS: at 73.12% examples, 118062 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:47,911 : INFO : EPOCH 5 - PROGRESS: at 74.59% examples, 118004 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:33:48,950 : INFO : EPOCH 5 - PROGRESS: at 75.99% examples, 118072 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:49,985 : INFO : EPOCH 5 - PROGRESS: at 77.37% examples, 118143 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:50,996 : INFO : EPOCH 5 - PROGRESS: at 78.68% examples, 118151 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:52,041 : INFO : EPOCH 5 - PROGRESS: at 80.01% examples, 118098 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:53,089 : INFO : EPOCH 5 - PROGRESS: at 81.41% examples, 118142 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:54,142 : INFO : EPOCH 5 - PROGRESS: at 82.73% examples, 118070 words/s, in_qsize 5, out_qsize 2
+2021-01-29 09:33:55,158 : INFO : EPOCH 5 - PROGRESS: at 84.12% examples, 118162 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:56,179 : INFO : EPOCH 5 - PROGRESS: at 85.51% examples, 118233 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:57,258 : INFO : EPOCH 5 - PROGRESS: at 86.92% examples, 118195 words/s, in_qsize 4, out_qsize 1
+2021-01-29 09:33:58,263 : INFO : EPOCH 5 - PROGRESS: at 88.34% examples, 118299 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:33:59,286 : INFO : EPOCH 5 - PROGRESS: at 89.66% examples, 118273 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:00,299 : INFO : EPOCH 5 - PROGRESS: at 90.98% examples, 118272 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:01,401 : INFO : EPOCH 5 - PROGRESS: at 92.34% examples, 118216 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:02,483 : INFO : EPOCH 5 - PROGRESS: at 93.72% examples, 118204 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:03,488 : INFO : EPOCH 5 - PROGRESS: at 95.03% examples, 118225 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:04,517 : INFO : EPOCH 5 - PROGRESS: at 96.35% examples, 118206 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:05,547 : INFO : EPOCH 5 - PROGRESS: at 97.74% examples, 118264 words/s, in_qsize 6, out_qsize 0
+2021-01-29 09:34:06,641 : INFO : EPOCH 5 - PROGRESS: at 99.15% examples, 118223 words/s, in_qsize 5, out_qsize 0
+2021-01-29 09:34:07,127 : INFO : worker thread finished; awaiting finish of 2 more threads
+2021-01-29 09:34:07,192 : INFO : worker thread finished; awaiting finish of 1 more threads
+2021-01-29 09:34:07,209 : INFO : worker thread finished; awaiting finish of 0 more threads
+2021-01-29 09:34:07,209 : INFO : EPOCH - 5 : training on 13404989 raw words (8995575 effective words) took 76.0s, 118350 effective words/s
+2021-01-29 09:34:07,209 : INFO : training on a 67024945 raw words (44977795 effective words) took 381.6s, 117867 effective words/s
+2021-01-29 09:34:07,210 : INFO : saving Word2Vec object under ../data/word2vec/model_data/1.bin, separately None
+2021-01-29 09:34:07,210 : INFO : not storing attribute vectors_norm
+2021-01-29 09:34:07,210 : INFO : not storing attribute cum_table
+2021-01-29 09:34:08,914 : INFO : saved ../data/word2vec/model_data/1.bin
+2021-01-29 09:34:08,915 : INFO : storing 21117x300 projection weights into ../data/word2vec/model_data/1.dict
