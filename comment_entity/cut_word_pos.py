@@ -10,7 +10,7 @@ cut_word_pos_col = db.get_collection("pos_words")
 
 data_path = Path("../data/all_text.txt")
 content = data_path.read_text(encoding="utf-8")
-lines = filter(None,map(lambda x:x.strip(),content.split("\n")))
+lines = list(filter(None,map(lambda x:x.strip(),content.split("\n")))) 
 
 cut_func = fool.pos_cut
 
