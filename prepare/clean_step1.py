@@ -2,7 +2,7 @@
 用来对经过clean过滤后的数据做进一步的过滤,过滤掉全是重复字符的和全是字母构成的评论,以及将句子按字去重后，数量小于3的评论
 增加is_filter_clean_step1标志，如果为true，则说明是需要删除的评论
 """
-from config import clean_col,data_path
+from prepare.config import clean_col,data_path
 from pymongo import UpdateOne
 from tqdm import tqdm
 import re

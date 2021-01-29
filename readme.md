@@ -5,3 +5,5 @@
 一些中间产生的数据等
 ## word2vec
 使用word2vec来训练教评的词向量
+## comment_entity
+提取评论实体的相关代码
