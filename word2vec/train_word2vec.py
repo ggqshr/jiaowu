@@ -11,7 +11,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 all_files = word2vec.LineSentence("../data/word2vec/word_cut_res.txt") 
 
-model = word2vec.Word2Vec(all_files,hs=1,min_count=5,iter=5, window=5,size=300,sg=1,workers=40)
+model = word2vec.Word2Vec(all_files,hs=1,min_count=5,iter=5, window=5,size=300,sg=1,workers=3)
 model.save("../data/word2vec/model_data/1.bin")
 model.wv.save_word2vec_format("../data/word2vec/model_data/1.dict")
 
