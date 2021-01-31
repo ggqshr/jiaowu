@@ -27,7 +27,7 @@ with open(data_path.joinpath("all_text.txt"),'w',encoding="utf-8") as f:
         content = item.get("pjxx")
 
         # 将所有的类似“刘老师|刘星老师|刘星”之类的文本替换成老师
-        content = re.sub(all_first_name_to_sub_reg,"老师",content)
+        # content = re.sub(all_first_name_to_sub_reg,"老师",content)
         content = re.sub(all_name_teacher_to_sub_reg,"老师",content)
         content = re.sub(all_name_to_sub_reg,"老师",content)
         

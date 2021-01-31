@@ -1,3 +1,6 @@
+"""
+使用分词和词性标注工具将句子处理并存储到mongodb当中,写入到pos_words中
+"""
 import fool
 from tqdm import tqdm
 import re
