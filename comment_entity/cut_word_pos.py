@@ -26,7 +26,7 @@ all_first_name = set(filter(lambda x:not ('a' <= x <= 'z'),map(lambda x:x.lower(
 all_first_name_to_sub_reg = "(%s)老师" % "|".join(all_first_name)
 first_name_file_dict = StringIO()
 for first in all_first_name:
-    first_name_file_dict.write("%s %s\n" % (first,10))
+    first_name_file_dict.write("%s老师 %s\n" % (first,10))
 with open(SpooledTemporaryFile(mode="a")) as f:
     f.write(first_name_file_dict.getvalue())
     f.seek(0)
