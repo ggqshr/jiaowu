@@ -8,6 +8,8 @@ import sys
 sys.path.append("..")
 from prepare.config import db
 from pathlib import Path
+from io import StringIO
+from tempfile import NamedTemporaryFile
 
 cut_word_pos_col = db.get_collection("pos_words")
 
@@ -22,6 +24,13 @@ all_first_name = [i[0] for i in all_teacher_name]
 all_first_name = set(filter(lambda x:not ('a' <= x <= 'z'),map(lambda x:x.lower(),all_first_name)))
 
 all_first_name_to_sub_reg = "(%s)老师" % "|".join(all_first_name)
+first_name_file_dict = StringIO()
+for first in all_first_name:
+    first_name_file_dict.write("%s老师 %s\n" % (first,10))
+with NamedTemporaryFile(mode="a",delete=False) as f:
+    f.write(first_name_file_dict.getvalue())
+    f.seek(0)
+    fool.load_userdict(f.name)
 
 cut_func = fool.pos_cut
 
