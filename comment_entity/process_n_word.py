@@ -21,7 +21,7 @@ def get_words_wirte_to_redis():
     with r_client.pipeline(transaction=False) as p:
         for index,item in tqdm(enumerate(all_items)):
             content = item.get("words_pos")
-            for k, v in content.items():
+            for k, v in content:
                 if v.startswith("n") and not v.startswith("nr"):
                     n_words.append(k)
                     p.sadd("word:"+k, str(item.get("_id")))
@@ -61,7 +61,7 @@ def use_select_cal_pmi(words):
 
 
 if __name__ == '__main__':
-    #n_words = get_words_wirte_to_redis()
-    #filter_res = get_counter_ge_100(n_words)
+    n_words = get_words_wirte_to_redis()
+    filter_res = get_counter_ge_100(n_words)
     filter_res = [i.split(",") for i in filter(None,Path("../data/comment_entity/top_100_n_words.txt").read_text().split("\n"))]
     use_select_cal_pmi(filter_res)
