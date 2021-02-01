@@ -27,7 +27,7 @@ all_first_name_to_sub_reg = "(%s)老师" % "|".join(all_first_name)
 first_name_file_dict = StringIO()
 for first in all_first_name:
     first_name_file_dict.write("%s老师 %s\n" % (first,10))
-with open(NamedTemporaryFile(mode="a",delete=False)) as f:
+with NamedTemporaryFile(mode="a",delete=False) as f:
     f.write(first_name_file_dict.getvalue())
     f.seek(0)
     fool.load_userdict(f.name)

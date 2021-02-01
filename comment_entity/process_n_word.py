@@ -22,7 +22,7 @@ def get_words_wirte_to_redis():
         for index,item in tqdm(enumerate(all_items)):
             content = item.get("words_pos")
             for k, v in content.items():
-                if v.startswith("n"):
+                if v.startswith("n") and not v.startswith("nr"):
                     n_words.append(k)
                     p.sadd("word:"+k, str(item.get("_id")))
             if index % 1000 == 0 and index != 0:
@@ -56,7 +56,7 @@ def cal_pmi(w1, w2):
 def use_select_cal_pmi(words):
     res_list = []
     for word,_ in words:
-        res_list.append((word,cal_pmi("老师",word)))
+        res_list.append((word,cal_pmi("教学",word)))
     pprint(list(sorted(res_list,key=lambda x:x[1])))
 
 
