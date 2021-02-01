@@ -4,6 +4,7 @@
 2.使用pmi计算
 """
 import sys
+from tqdm import tqdm
 sys.path.append("..")
 from prepare.config import db,r_client
 from collections import Counter
@@ -14,12 +15,13 @@ pos = db.get_collection("pos_words")
 all_items = pos.find({},{"words_pos":True})
 
 n_words = list()
-for item in all_items:
-    content = item.get("words_pos")
-    for k,v in content.items():
-        if v.startswith("n"):
-            n_words.append(k)
-            r_client.sadd("word_"+k,item.get("_id"))
+with r_client.pipeline(transaction=False) as p:
+    for item in tqdm(all_items):
+        content = item.get("words_pos")
+        for k,v in content.items():
+            if v.startswith("n"):
+                n_words.append(k)
+                p.sadd("word:"+k,str(item.get("_id")))
 
 cc = Counter(n_words)
 
