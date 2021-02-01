@@ -1,6 +1,3 @@
-from prepare.config import db, r_client
-from pathlib import Path
-from collections import Counter
 """
 将词性为n开头的词语拿出来，做处理，
 1.使用词频过滤，过滤掉词频小的词语
@@ -9,6 +6,9 @@ from collections import Counter
 import sys
 from tqdm import tqdm
 sys.path.append("..")
+from prepare.config import db, r_client
+from pathlib import Path
+from collections import Counter
 
 
 def get_words_wirte_to_redis():
