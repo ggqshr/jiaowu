@@ -19,6 +19,7 @@ for item in all_items:
     for k,v in content.items():
         if v.startswith("n"):
             n_words.append(k)
+            r_client.sadd("word_"+k,item.get("_id"))
 
 cc = Counter(n_words)
 
