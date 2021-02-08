@@ -53,10 +53,10 @@ def process(res,ll):
     for rr,sent in zip(res,ll):
         this_item = {}
         this_item['sent'] = sent
-        temp_dict = {k.replace(".","").replace("$",""):v for k,v in rr if not v.startswith("w")}
-        temp_dict = dict(map(sub_match,temp_dict.items()))
+        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in rr if not v.startswith("w")]
+        temp_dict = list(map(sub_match,temp_dict))
         this_item['words_pos'] = temp_dict
-        this_item['all_words'] = [k for k,v in temp_dict.items() if not v.startswith("w")] # 过滤掉标点符号
+        this_item['all_words'] = [k for k,v in temp_dict if not v.startswith("w")] # 过滤掉标点符号
         insert_list.append(this_item)
     return insert_list
 
