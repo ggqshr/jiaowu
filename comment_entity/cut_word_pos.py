@@ -10,6 +10,7 @@ from prepare.config import db
 from pathlib import Path
 from io import StringIO
 from tempfile import NamedTemporaryFile
+import pickle
 
 cut_word_pos_col = db.get_collection("pos_words")
 
@@ -24,11 +25,16 @@ all_first_name = [i[0] for i in all_teacher_name]
 all_first_name = set(filter(lambda x:not ('a' <= x <= 'z'),map(lambda x:x.lower(),all_first_name)))
 
 all_first_name_to_sub_reg = "(%s)老师" % "|".join(all_first_name)
-first_name_file_dict = StringIO()
+temp_string_file = StringIO()
 for first in all_first_name:
-    first_name_file_dict.write("%s老师 %s\n" % (first,10))
-with NamedTemporaryFile(mode="a",delete=False) as f:
-    f.write(first_name_file_dict.getvalue())
+    temp_string_file.write("%s老师 %s\n" % (first,10))
+with open("../data/idiom.pth","rb") as f:
+    idiom_data = pickle.load(f)
+for ii in idiom_data:
+    temp_string_file.write("%s %s\n" % (ii,100))
+with NamedTemporaryFile(mode="a") as f:
+    f.write(temp_string_file.getvalue())
+    f.flush()
     f.seek(0)
     fool.load_userdict(f.name)
 
