@@ -58,7 +58,7 @@ def process(res,ll):
     for rr,sent in zip(res,ll):
         this_item = {}
         this_item['sent'] = sent
-        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in rr if not v!="wp"]
+        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in rr if v!="wp"]
         temp_dict = list(map(sub_match,temp_dict))
         this_item['words_pos'] = temp_dict
         this_item['all_words'] = [k for k,v in temp_dict if not v.startswith("w")] # 过滤掉标点符号
@@ -67,7 +67,7 @@ def process(res,ll):
 
 
 for line in tqdm(lines):
-    if len(process_list) % 10000 == 0 and len(process_list) != 0:
+    if len(process_list) % 1000 == 0 and len(process_list) != 0:
         res = cut_func(process_list)
         insert_list = process(res,process_list)
         cut_word_pos_col.insert_many(insert_list)
