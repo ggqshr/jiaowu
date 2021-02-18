@@ -1,7 +1,6 @@
 """
 使用分词和词性标注工具将句子处理并存储到mongodb当中,写入到pos_words中
 """
-import fool
 from tqdm import tqdm
 import re
 import sys
@@ -11,6 +10,9 @@ from pathlib import Path
 from io import StringIO
 from tempfile import NamedTemporaryFile
 import pickle
+from ltp import LTP
+
+ltp = LTP(path="/home/songwenyu/data/base.tgz")
 
 cut_word_pos_col = db.get_collection("pos_words")
 
@@ -36,10 +38,13 @@ with NamedTemporaryFile(mode="a") as f:
     f.write(temp_string_file.getvalue())
     f.flush()
     f.seek(0)
-    fool.load_userdict(f.name)
+    ltp.init_dict(path=f.name,max_window=4)
 
-cut_func = fool.pos_cut
-
+def cut_func(sent_list):
+    seg,hidden = ltp.seg(sent_list)
+    pos = ltp.pos(hidden)
+    for s,p in zip(seg,pos):
+        yield zip(s,p)
 process_list = []
 
 def sub_match(item):
@@ -53,7 +58,7 @@ def process(res,ll):
     for rr,sent in zip(res,ll):
         this_item = {}
         this_item['sent'] = sent
-        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in rr if not v.startswith("w")]
+        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in rr if not v!="wp"]
         temp_dict = list(map(sub_match,temp_dict))
         this_item['words_pos'] = temp_dict
         this_item['all_words'] = [k for k,v in temp_dict if not v.startswith("w")] # 过滤掉标点符号
@@ -74,7 +79,7 @@ for line in tqdm(lines):
     process_list.append(line)
 
 if len(process_list) != 0:
-    res = fool.pos_cut(process_list)
+    res = cut_func(process_list)
     insert_list = process(res,process_list)
     cut_word_pos_col.insert_many(insert_list)
     process_list.clear()
