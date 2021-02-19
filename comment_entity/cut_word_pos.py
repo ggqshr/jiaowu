@@ -43,8 +43,9 @@ with NamedTemporaryFile(mode="a") as f:
 def cut_func(sent_list):
     seg,hidden = ltp.seg(sent_list)
     pos = ltp.pos(hidden)
-    for s,p in zip(seg,pos):
-        yield zip(s,p)
+    dep = ltp.dep(hidden)
+    for s,p,d in zip(seg,pos,dep):
+        yield zip(s,p),d
 process_list = []
 
 def sub_match(item):
@@ -56,18 +57,21 @@ def sub_match(item):
 def process(res,ll):
     insert_list = []
     for rr,sent in zip(res,ll):
+        pos_res = rr[0]
+        dep_res = rr[1]
         this_item = {}
         this_item['sent'] = sent
-        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in rr if v!="wp"]
+        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in pos_res if v!="wp"]
         temp_dict = list(map(sub_match,temp_dict))
         this_item['words_pos'] = temp_dict
         this_item['all_words'] = [k for k,v in temp_dict if not v.startswith("w")] # 过滤掉标点符号
+        this_item["dep"] = dep_res
         insert_list.append(this_item)
     return insert_list
 
 
 for line in tqdm(lines):
-    if len(process_list) % 1000 == 0 and len(process_list) != 0:
+    if len(process_list) % 100 == 0 and len(process_list) != 0:
         res = cut_func(process_list)
         insert_list = process(res,process_list)
         cut_word_pos_col.insert_many(insert_list)
