@@ -28,13 +28,14 @@ all_first_name = set(filter(lambda x:not ('a' <= x <= 'z'),map(lambda x:x.lower(
 
 all_first_name_to_sub_reg = "(%s)老师" % "|".join(all_first_name)
 temp_string_file = StringIO()
+temp_string_file.write("感谢\n谢谢\n")
 for first in all_first_name:
-    temp_string_file.write("%s老师 %s\n" % (first,10))
+    temp_string_file.write("%s老师\n" % (first))
 with open("../data/idiom.pth","rb") as f:
     idiom_data = pickle.load(f)
 for ii in idiom_data:
-    temp_string_file.write("%s %s\n" % (ii,100))
-with NamedTemporaryFile(mode="a") as f:
+    temp_string_file.write("%s\n" % (ii))
+with NamedTemporaryFile(mode="w+") as f:
     f.write(temp_string_file.getvalue())
     f.flush()
     f.seek(0)
