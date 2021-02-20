@@ -70,7 +70,7 @@ def process(res,ll):
         this_item = {}
         this_item['sent'] = sent
         this_item['origin_pos'] = [(k.replace(".","").replace("$",""),v) for k,v in pos_res] # 原始的分词词性标注结果，包含标点符号
-        temp_dict = [(k.replace(".","").replace("$",""),v) for k,v in pos_res if v!="wp"] 
+        temp_dict = [(k,v) for k,v in this_item['origin_pos'] if v!="wp"] 
         # temp_dict = list(map(sub_match,temp_dict))
         this_item['filter_pos'] = temp_dict # 去除标点符号的标注结果
         this_item['all_words_origin'] = [k for k,v in this_item['origin_pos']] # 原始的词语序列
