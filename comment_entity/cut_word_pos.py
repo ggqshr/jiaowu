@@ -11,8 +11,9 @@ from io import StringIO
 from tempfile import NamedTemporaryFile
 import pickle
 from ltp import LTP
+import os
 
-ltp = LTP(path="/home/songwenyu/data/base.tgz")
+ltp = LTP(path="%s/data/base.tgz" % os.getenv("HOME"))
 
 cut_word_pos_col = db.get_collection("pos_words")
 
