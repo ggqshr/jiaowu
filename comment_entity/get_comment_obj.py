@@ -172,6 +172,31 @@ def rule_16(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                         word_res += (end_word + c_word + n_word)
                         return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d_n/v')
 
+def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    word_res = ""
+    if end_word in ['是','有','没有','算'] and end < len(dep):
+        for index in range(end,len(dep)):
+            _,e,rel = dep[index]
+            c_word,c_pos = pos_origin[index]
+            if e == end and rel == 'VOB' and c_pos == 'd':
+                if index < (len(dep) - 1):
+                    ii = index + 1
+                    n_word,n_pos = pos_origin[ii]
+                    temp = []
+                    while n_pos != 'b':
+                        temp.append(n_word)
+                        ii += 1
+                        if ii < len(dep):
+                            n_word,n_pos = pos_origin[ii]
+                        else:
+                            break
+                    if ii < (len(dep) - 1):
+                        ii += 1
+                        ww,pp = pos_origin[ii]
+                        if pp == 'a':
+                            word_res += (end_word,+c_word+"".join(temp)+ww)
+                            return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
+
 
 
 for item in all_items:
@@ -198,6 +223,7 @@ for item in all_items:
     res_rule_end_v_att = []
     res_rule_end_a_aa = []
     res_rule_end_v_d__n_or_v = []
+    res_rule_end_v_ddd_a = []
     for item in res_table1:
         start_pos = item[2]
         end_pos = item[3]
@@ -236,6 +262,10 @@ for item in all_items:
             res = rule_16(dep,pos_origin,*item)
             if res:
                 res_rule_end_v_d__n_or_v.append(res)
+
+            res = rule_17(dep,pos_origin,*item)
+            if res:
+                res_rule_end_v_ddd_a.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
     # print(" v_att_comment_obj: %s" % (res_rule_v_att) )
@@ -243,6 +273,7 @@ for item in all_items:
     # print(" res_rule_end_a_att: %s" % (res_rule_end_a_att) )
     # print(" res_rule_end_a_aa: %s" % (res_rule_end_a_aa) )
     # print(" res_rule_end_v_att: %s" % (res_rule_end_v_att) )
-    print(" res_rule_end_v_d__n_or_v: %s" % (res_rule_end_v_d__n_or_v) )
+    # print(" res_rule_end_v_d__n_or_v: %s" % (res_rule_end_v_d__n_or_v) )
+    print(" res_rule_end_v_ddd_a: %s" % (res_rule_end_v_ddd_a) )
 
 
