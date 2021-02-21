@@ -151,8 +151,10 @@ def rule_14(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
         word,pos = pos_origin[ii]
         if pos == 'a':
             word_res += word
-        ii += 1
-    return (start_word,word_res+end_word,start_pos,end_pos,rel,start,end,"a_a")
+            ii += 1
+        else:
+            break
+    return (start_word,end_word+word_res,start_pos,end_pos,rel,start,end,"a_a")
 
 for item in all_items:
     _id = item.get("_id")
