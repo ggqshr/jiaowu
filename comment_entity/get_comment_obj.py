@@ -126,6 +126,34 @@ def rule_12(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
         if par[1] == start and par[2] in ['COO','VOB']:
             return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"v_coo&vob")
 
+def rule_13(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    for index in range(0,end-1):
+        par = dep[index]
+        parent = par[1]
+        rel = par[2]
+        count = 0 # 防止死循环
+        while parent <= end and count < 10:
+            count += 1
+            if rel in ['ATT','ADV']:
+                if parent == end:
+                    return (start_word,"".join(words_origin[index:end]),start_pos,end_pos,rel,index,end,"a_att")
+                else:
+                    this_par = dep[parent-1]
+                    parent = this_par[1]
+                    rel = this_par[2]
+            else:
+                break
+
+def rule_14(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    ii = end
+    word_res = ""
+    while ii < len(pos_origin):
+        word,pos = pos_origin[ii]
+        if pos == 'a':
+            word_res += word
+        ii += 1
+    return (start_word,word_res+end_word,start_pos,end_pos,rel,start,end,"a_a")
+
 for item in all_items:
     _id = item.get("_id")
     dep = item.get("dep")
@@ -146,8 +174,11 @@ for item in all_items:
     res_rule_att = []
     res_rule_v_att = []
     res_rule_v_coo = []
+    res_rule_end_av_att = []
+    res_rule_end_a_aa = []
     for item in res_table1:
         start_pos = item[2]
+        end_pos = item[3]
         if start_pos == "n":
             # coo
             res = rule_10(dep,words_origin,*item)
@@ -167,9 +198,19 @@ for item in all_items:
             res = rule_12(dep,words_origin,*item)
             if res:
                 res_rule_v_coo.append(res)
+        if end_pos in ["a",'v']:
+            res = rule_13(dep,words_origin,*item)
+            if res:
+                res_rule_end_av_att.append(res)
+
+            res = rule_14(dep,pos_origin,*item)
+            if res:
+                res_rule_end_a_aa.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
-    print(" v_att_comment_obj: %s" % (res_rule_v_att) )
-    print(" v_coo_comment_obj: %s" % (res_rule_v_coo) )
+    # print(" v_att_comment_obj: %s" % (res_rule_v_att) )
+    # print(" v_coo_comment_obj: %s" % (res_rule_v_coo) )
+    print(" res_rule_end_av_att: %s" % (res_rule_end_av_att) )
+    print(" res_rule_end_a_aa: %s" % (res_rule_end_a_aa) )
 
 
