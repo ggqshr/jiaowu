@@ -212,9 +212,9 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                 if index < (len(dep) - 1): # 如果有，则继续往下面找词性为d的词语
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
-                    print(n_word,n_pos)
                     temp = []
                     while n_pos == 'd':
+                        print(n_word,n_pos)
                         temp.append(n_word)
                         ii += 1
                         if ii < len(dep):
