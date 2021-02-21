@@ -91,7 +91,7 @@ for item in all_items:
             for index in range(start-1,end-1):
                 par = dep[index]
                 if par[1] == start and par[2] == 'COO':
-                    res_rule_coo.append(("".join(words_origin[start-1:index]),end_word,start_pos,end_pos,rel,start,end,"coo"))
+                    res_rule_coo.append(("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo"))
     print(" coo_comment_obj: %s" % (res_rule_coo) )
 
 
