@@ -169,6 +169,7 @@ for item in all_items:
                 res_rule_v_coo.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
-    print(" v_sbv_comment_obj: %s" % (res_rule_v_att) )
+    print(" v_att_comment_obj: %s" % (res_rule_v_att) )
+    print(" v_coo_comment_obj: %s" % (res_rule_v_coo) )
 
 
