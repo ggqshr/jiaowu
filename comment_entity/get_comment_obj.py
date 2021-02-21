@@ -78,7 +78,9 @@ def rule_9(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end)
         par = dep[index]
         parent = par[1]
         rel = par[2]
-        while parent <= start:
+        count = 0 # 防止死循环
+        while parent <= start and count < 10:
+            count += 1
             if rel in ['ATT','ADV']:
                 if parent == start:
                     return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"att&adv")
