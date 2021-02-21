@@ -102,6 +102,30 @@ def rule_10(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
         if par[1] == start and par[2] == 'COO':
             return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
 
+def rule_11(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    for index in range(0,start):
+        par = dep[index]
+        parent = par[1]
+        rel = par[2]
+        count = 0 # 防止死循环
+        while parent <= start and count < 10:
+            count += 1
+            if rel in ['ATT','ADV','SBV','FOB']:
+                if parent == start:
+                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"att&adv")
+                else:
+                    this_par = dep[parent-1]
+                    parent = this_par[1]
+                    rel = this_par[2]
+            else:
+                break
+
+def rule_12(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    for index in range(start-1,end-1):
+        par = dep[index]
+        if par[1] == start and par[2] in ['COO','VOB']:
+            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
+
 for item in all_items:
     _id = item.get("_id")
     dep = item.get("dep")
@@ -117,9 +141,10 @@ for item in all_items:
             if rule(start_pos,end_pos,rel):
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     print("sent : %s" % sent)
-    # print(" comment_obj: %s" % (res_table1) )
+    print(" comment_obj: %s" % (res_table1) )
     res_rule_coo = []
     res_rule_att = []
+    res_rule_v_SBV = []
     for item in res_table1:
         if start_pos == "n":
             # coo
@@ -131,7 +156,12 @@ for item in all_items:
             res = rule_9(dep,words_origin,*item)
             if res:
                 res_rule_att.append(res)
+        elif start_pos == 'v':
+            res = rule_11(dep,words_origin,*item)
+            if res:
+                res_rule_v_SBV.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
-    print(" att_comment_obj: %s" % (res_rule_att) )
+    # print(" att_comment_obj: %s" % (res_rule_att) )
+    print(" v_sbv_comment_obj: %s" % (res_rule_v_SBV) )
 
 
