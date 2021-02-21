@@ -182,6 +182,9 @@ def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                 if index < (len(dep) - 1):
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
+                    if n_pos == 'a':
+                        word_res += (end_word+c_word+n_word)
+                        return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
                     temp = []
                     while n_pos == 'd':
                         temp.append(n_word)
@@ -212,9 +215,11 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                 if index < (len(dep) - 1): # 如果有，则继续往下面找词性为d的词语
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
+                    if n_pos != "d" and n_pos in ['i','v','a']:
+                        word_res += (end_word+c_word+n_word)
+                        return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_i/v/a')
                     temp = []
                     while n_pos == 'd':
-                        print(n_word,n_pos)
                         temp.append(n_word)
                         ii += 1
                         if ii < len(dep):
