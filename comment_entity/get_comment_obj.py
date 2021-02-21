@@ -112,7 +112,7 @@ def rule_11(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
             count += 1
             if rel in ['ATT','ADV','SBV','FOB']:
                 if parent == start:
-                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"att&adv")
+                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"v_att&adv&sbv&fob")
                 else:
                     this_par = dep[parent-1]
                     parent = this_par[1]
@@ -124,7 +124,7 @@ def rule_12(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
     for index in range(start-1,end-1):
         par = dep[index]
         if par[1] == start and par[2] in ['COO','VOB']:
-            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
+            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"v_coo&vob")
 
 for item in all_items:
     _id = item.get("_id")
@@ -144,7 +144,8 @@ for item in all_items:
     print(" comment_obj: %s" % (res_table1) )
     res_rule_coo = []
     res_rule_att = []
-    res_rule_v_SBV = []
+    res_rule_v_att = []
+    res_rule_v_coo = []
     for item in res_table1:
         start_pos = item[2]
         if start_pos == "n":
@@ -158,11 +159,16 @@ for item in all_items:
             if res:
                 res_rule_att.append(res)
         elif start_pos == 'v':
+            # att & adv & sbv & fob
             res = rule_11(dep,words_origin,*item)
             if res:
-                res_rule_v_SBV.append(res)
+                res_rule_v_att.append(res)
+
+            res = rule_12(dep,words_origin,*item)
+            if res:
+                res_rule_v_coo.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
-    print(" v_sbv_comment_obj: %s" % (res_rule_v_SBV) )
+    print(" v_sbv_comment_obj: %s" % (res_rule_v_att) )
 
 
