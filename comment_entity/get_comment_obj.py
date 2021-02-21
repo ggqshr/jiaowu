@@ -115,7 +115,7 @@ for item in all_items:
             if rule(start_pos,end_pos,rel):
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     print("sent : %s" % sent)
-    # print("sent : %s\n comment_obj: %s" % (sent,res_table1) )
+    # print(" comment_obj: %s" % (res_table1) )
     res_rule_coo = []
     res_rule_att = []
     for item in res_table1:
@@ -130,6 +130,6 @@ for item in all_items:
             if res:
                 res_rule_att.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
-    print(" att_comment_obj: %s" % (sent,res_rule_att) )
+    print(" att_comment_obj: %s" % (res_rule_att) )
 
 
