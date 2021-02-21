@@ -207,10 +207,12 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
         for index in range(end,len(dep)): # 从评价词后找依赖于评价词关系为VOB且词性为d的词语
             _,e,rel = dep[index]
             c_word,c_pos = pos_origin[index]
+            print(c_word,c_pos)
             if e == end and rel == 'VOB' and c_pos == 'd':
                 if index < (len(dep) - 1): # 如果有，则继续往下面找词性为d的词语
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
+                    print(n_word,n_pos)
                     temp = []
                     while n_pos == 'd':
                         temp.append(n_word)
