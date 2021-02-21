@@ -146,6 +146,7 @@ for item in all_items:
     res_rule_att = []
     res_rule_v_SBV = []
     for item in res_table1:
+        start_pos = item[2]
         if start_pos == "n":
             # coo
             res = rule_10(dep,words_origin,*item)
