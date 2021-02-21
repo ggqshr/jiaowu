@@ -74,7 +74,7 @@ def rule_9(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end)
     """
     使用ATT或者ADV关系补全评论对象提取
     """
-    for index in range(0,start):
+    for index in range(0,start-1):
         par = dep[index]
         parent = par[1]
         rel = par[2]
@@ -103,7 +103,7 @@ def rule_10(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
             return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
 
 def rule_11(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
-    for index in range(0,start):
+    for index in range(0,start-1):
         par = dep[index]
         parent = par[1]
         rel = par[2]
