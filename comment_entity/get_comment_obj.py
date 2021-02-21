@@ -70,13 +70,37 @@ def table_4_rule_7(start_pos, end_pos, rel):
 
 all_table1_rule = [eval("table_4_rule_%s" % i) for i in range(1,8)]
 
+def rule_9(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    """
+    使用ATT或者ADV关系补全评论对象提取
+    """
+    for index in range(0,start):
+        par = dep[index]
+        parent = par[1]
+        rel = par[2]
+        count = 0 # 防止死循环
+        while parent <= start and count < 10:
+            count += 1
+            if rel in ['ATT','ADV']:
+                if parent == start:
+                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"att&adv")
+                else:
+                    this_par = dep[parent-1]
+                    parent = this_par[1]
+                    rel = this_par[2]
+            else:
+                break
 
-def coo_rule(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
-    if start_pos == "n":
-        for index in range(start-1,end-1):
-            par = dep[index]
-            if par[1] == start and par[2] == 'COO':
-                return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
+
+
+def rule_10(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    """
+    使用coo规则补全评价对象，在评价方面和形容词之间寻找，如果和评论对象是coo关系，那么就把两个词之间所有的词语当作新的补全评价对象
+    """
+    for index in range(start-1,end-1):
+        par = dep[index]
+        if par[1] == start and par[2] == 'COO':
+            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
 
 for item in all_items:
     _id = item.get("_id")
@@ -92,12 +116,22 @@ for item in all_items:
         for rule in all_table1_rule:
             if rule(start_pos,end_pos,rel):
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
-    print("sent : %s\n comment_obj: %s" % (sent,res_table1) )
+    print("sent : %s" % sent)
+    # print(" comment_obj: %s" % (res_table1) )
     res_rule_coo = []
+    res_rule_att = []
     for item in res_table1:
-        res = coo_rule(dep,words_origin,*item)
-        if res:
-            res_rule_coo.append(res)
-    print(" coo_comment_obj: %s" % (res_rule_coo) )
+        if start_pos == "n":
+            # coo
+            res = rule_10(dep,words_origin,*item)
+            if res:
+                res_rule_coo.append(res)
+
+            # att & adv
+            res = rule_9(dep,words_origin,*item)
+            if res:
+                res_rule_att.append(res)
+    # print(" coo_comment_obj: %s" % (res_rule_coo) )
+    print(" att_comment_obj: %s" % (res_rule_att) )
 
 
