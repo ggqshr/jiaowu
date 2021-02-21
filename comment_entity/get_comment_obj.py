@@ -159,8 +159,78 @@ def rule_14(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
 def rule_15(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
     return rule_13(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end)
 
-def rule_16(dep,pos_origin,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
-    pass
+def rule_16(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    word_res = ""
+    if end_word in ['是','有','没有','算'] and end < len(dep):
+        for index in range(end,len(dep)):
+            _,e,rel = dep[index]
+            c_word,c_pos = pos_origin[index]
+            if e == end and rel == 'VOB' and c_pos == 'd':
+                if index < (len(dep) - 1):
+                    n_word,n_pos = pos_origin[index+1]
+                    if n_pos in ['n','v']:
+                        word_res += (end_word + c_word + n_word)
+                        return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d_n/v')
+
+def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    word_res = ""
+    if end_word in ['是','有','没有','算'] and end < len(dep):
+        for index in range(end,len(dep)):
+            _,e,rel = dep[index]
+            c_word,c_pos = pos_origin[index]
+            if e == end and rel == 'VOB' and c_pos == 'd':
+                if index < (len(dep) - 1):
+                    ii = index + 1
+                    n_word,n_pos = pos_origin[ii]
+                    if n_pos == 'a':
+                        word_res += (end_word+c_word+n_word)
+                        return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
+                    temp = []
+                    while n_pos == 'd':
+                        temp.append(n_word)
+                        ii += 1
+                        if ii < len(dep):
+                            n_word,n_pos = pos_origin[ii]
+                        else:
+                            break
+                    if ii < (len(dep) - 1):
+                        ii += 1
+                        ww,pp = pos_origin[ii]
+                        if pp == 'a':
+                            word_res += (end_word+c_word+"".join(temp)+ww)
+                            return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
+
+def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    """
+    v--->(d)+i/v/a
+     (VOB)
+    """
+    word_res = ""
+    if end < len(dep):
+        for index in range(end,len(dep)): # 从评价词后找依赖于评价词关系为VOB且词性为d的词语
+            _,e,rel = dep[index]
+            c_word,c_pos = pos_origin[index]
+            if e == end and rel == 'VOB' and c_pos == 'd':
+                if index < (len(dep) - 1): # 如果有，则继续往下面找词性为d的词语
+                    ii = index + 1
+                    n_word,n_pos = pos_origin[ii]
+                    if n_pos != "d" and n_pos in ['i','v','a']:
+                        word_res += (end_word+c_word+n_word)
+                        return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_i/v/a')
+                    temp = []
+                    while n_pos == 'd':
+                        temp.append(n_word)
+                        ii += 1
+                        if ii < len(dep):
+                            n_word,n_pos = pos_origin[ii]
+                        else:
+                            break
+                    if ii < (len(dep) - 1):# 如果ii还没到最后，则判断是否为指定的词性
+                        ii += 1
+                        ww,pp = pos_origin[ii]
+                        if pp in ['i','v','a']:
+                            word_res += (end_word+c_word+"".join(temp)+ww)
+                            return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_i/v/a')
 
 for item in all_items:
     _id = item.get("_id")
@@ -185,6 +255,9 @@ for item in all_items:
     res_rule_end_a_att = []
     res_rule_end_v_att = []
     res_rule_end_a_aa = []
+    res_rule_end_v_d__n_or_v = []
+    res_rule_end_v_ddd_a = []
+    res_rule_end_v_ddd__a_or_i_or_v = []
     for item in res_table1:
         start_pos = item[2]
         end_pos = item[3]
@@ -219,12 +292,27 @@ for item in all_items:
             res = rule_15(dep,words_origin,*item)
             if res:
                 res_rule_end_v_att.append(res)
+
+            res = rule_16(dep,pos_origin,*item)
+            if res:
+                res_rule_end_v_d__n_or_v.append(res)
+
+            res = rule_17(dep,pos_origin,*item)
+            if res:
+                res_rule_end_v_ddd_a.append(res)
+
+            res = rule_18(dep,pos_origin,*item)
+            if res:
+                res_rule_end_v_ddd__a_or_i_or_v.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
     # print(" v_att_comment_obj: %s" % (res_rule_v_att) )
     # print(" v_coo_comment_obj: %s" % (res_rule_v_coo) )
     # print(" res_rule_end_a_att: %s" % (res_rule_end_a_att) )
     # print(" res_rule_end_a_aa: %s" % (res_rule_end_a_aa) )
-    print(" res_rule_end_v_att: %s" % (res_rule_end_v_att) )
+    # print(" res_rule_end_v_att: %s" % (res_rule_end_v_att) )
+    # print(" res_rule_end_v_d__n_or_v: %s" % (res_rule_end_v_d__n_or_v) )
+    # print(" res_rule_end_v_ddd_a: %s" % (res_rule_end_v_ddd_a) )
+    print(" res_rule_end_v_ddd__a_or_i_or_v: %s" % (res_rule_end_v_ddd__a_or_i_or_v) )
 
 
