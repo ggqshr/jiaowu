@@ -183,7 +183,7 @@ def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
                     temp = []
-                    while n_pos == 'b':
+                    while n_pos == 'd':
                         temp.append(n_word)
                         ii += 1
                         if ii < len(dep):
