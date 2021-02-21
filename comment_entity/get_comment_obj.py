@@ -12,7 +12,7 @@ from prepare.config import r_client, db
 pos_col = db.get_collection("pos_words")
 
 all_items = pos_col.find(
-    {}, {"dep": True, "origin_pos": True, "_id": True,"sent":True}, no_cursor_timeout=True)
+    {}, {"dep": True, "origin_pos": True, "_id": True,"sent":True,"all_words_origin":True}, no_cursor_timeout=True)
 
 
 def get_relationship(words_pos_list, start, end):
@@ -73,13 +73,14 @@ all_table1_rule = [eval("table_4_rule_%s" % i) for i in range(1,8)]
 for item in all_items:
     _id = item.get("_id")
     dep = item.get("dep")
-    words_origin = item.get("origin_pos")
+    pos_origin = item.get("origin_pos")
+    words_origin = item.get("all_words_origin")
     sent = item.get("sent")
     res_table1 = []
     # table 4 rule 1
     for dd in dep:
         start,end,rel = dd
-        start_pos,end_pos,start_word,end_word = get_relationship(words_origin,start,end)
+        start_pos,end_pos,start_word,end_word = get_relationship(pos_origin,start,end)
         for rule in all_table1_rule:
             if rule(start_pos,end_pos,rel):
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
