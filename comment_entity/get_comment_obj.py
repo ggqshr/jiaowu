@@ -194,7 +194,8 @@ def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                         ii += 1
                         ww,pp = pos_origin[ii]
                         if pp == 'a':
-                            word_res += (end_word,+c_word+"".join(temp)+ww)
+                            temp_word = "".join(temp) if len(temp) != 0 else ""
+                            word_res += (end_word,+c_word+temp_word+ww)
                             return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
 
 def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
@@ -223,7 +224,8 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                         ii += 1
                         ww,pp = pos_origin[ii]
                         if pp in ['i','v','a']:
-                            word_res += (end_word,+c_word+"".join(temp)+ww)
+                            temp_word = "".join(temp) if len(temp) != 0 else ""
+                            word_res += (end_word,+c_word+temp_word+ww)
                             return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_i/v/a')
 
 for item in all_items:
