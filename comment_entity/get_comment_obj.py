@@ -156,6 +156,12 @@ def rule_14(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
             break
     return (start_word,end_word+word_res,start_pos,end_pos,rel,start,end,"a_a")
 
+def rule_15(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    return rule_13(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end)
+
+def rule_16(dep,pos_origin,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    pass
+
 for item in all_items:
     _id = item.get("_id")
     dep = item.get("dep")
@@ -176,7 +182,8 @@ for item in all_items:
     res_rule_att = []
     res_rule_v_att = []
     res_rule_v_coo = []
-    res_rule_end_av_att = []
+    res_rule_end_a_att = []
+    res_rule_end_v_att = []
     res_rule_end_a_aa = []
     for item in res_table1:
         start_pos = item[2]
@@ -200,19 +207,24 @@ for item in all_items:
             res = rule_12(dep,words_origin,*item)
             if res:
                 res_rule_v_coo.append(res)
-        if end_pos in ["a",'v']:
+        if end_pos == 'a':
             res = rule_13(dep,words_origin,*item)
             if res:
-                res_rule_end_av_att.append(res)
+                res_rule_end_a_att.append(res)
 
             res = rule_14(dep,pos_origin,*item)
             if res:
                 res_rule_end_a_aa.append(res)
+        elif end_pos == 'v':
+            res = rule_15(dep,words_origin,*item)
+            if res:
+                res_rule_end_v_att.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
     # print(" v_att_comment_obj: %s" % (res_rule_v_att) )
     # print(" v_coo_comment_obj: %s" % (res_rule_v_coo) )
-    print(" res_rule_end_av_att: %s" % (res_rule_end_av_att) )
-    print(" res_rule_end_a_aa: %s" % (res_rule_end_a_aa) )
+    # print(" res_rule_end_a_att: %s" % (res_rule_end_a_att) )
+    # print(" res_rule_end_a_aa: %s" % (res_rule_end_a_aa) )
+    print(" res_rule_end_v_att: %s" % (res_rule_end_v_att) )
 
 
