@@ -70,6 +70,14 @@ def table_4_rule_7(start_pos, end_pos, rel):
 
 all_table1_rule = [eval("table_4_rule_%s" % i) for i in range(1,8)]
 
+
+def coo_rule(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    if start_pos == "n":
+        for index in range(start-1,end-1):
+            par = dep[index]
+            if par[1] == start and par[2] == 'COO':
+                return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
+
 for item in all_items:
     _id = item.get("_id")
     dep = item.get("dep")
@@ -86,12 +94,10 @@ for item in all_items:
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     print("sent : %s\n comment_obj: %s" % (sent,res_table1) )
     res_rule_coo = []
-    for start_word,end_word,start_pos,end_pos,rel,start,end in res_table1:
-        if start_pos == "n":
-            for index in range(start-1,end-1):
-                par = dep[index]
-                if par[1] == start and par[2] == 'COO':
-                    res_rule_coo.append(("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo"))
+    for item in res_table1:
+        res = coo_rule(dep,words_origin,*item)
+        if res:
+            res_rule_coo.append(res)
     print(" coo_comment_obj: %s" % (res_rule_coo) )
 
 
