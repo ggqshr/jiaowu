@@ -198,13 +198,17 @@ def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                             return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
 
 def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
+    """
+    v--->(d)+i/v/a
+     (VOB)
+    """
     word_res = ""
     if end < len(dep):
-        for index in range(end,len(dep)):
+        for index in range(end,len(dep)): # 从评价词后找依赖于评价词关系为VOB且词性为d的词语
             _,e,rel = dep[index]
             c_word,c_pos = pos_origin[index]
             if e == end and rel == 'VOB' and c_pos == 'd':
-                if index < (len(dep) - 1):
+                if index < (len(dep) - 1): # 如果有，则继续往下面找词性为d的词语
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
                     temp = []
@@ -215,7 +219,7 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                             n_word,n_pos = pos_origin[ii]
                         else:
                             break
-                    if ii < (len(dep) - 1):
+                    if ii < (len(dep) - 1):# 如果ii还没到最后，则判断是否为指定的词性
                         ii += 1
                         ww,pp = pos_origin[ii]
                         if pp in ['i','v','a']:
