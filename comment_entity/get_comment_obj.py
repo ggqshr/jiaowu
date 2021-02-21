@@ -31,7 +31,10 @@ def table_4_rule_1(start_pos, end_pos, rel):
 
 
 def table_4_rule_2(start_pos, end_pos, rel):
-    if rel == "SBV" and start_pos == "n" and (end_pos == "d" or end_pos == "i"):
+    """
+    和论文中不同，start_pos增加了v，为了提取“讲解深入浅出”这种模式
+    """
+    if rel == "SBV" and (start_pos == "n" or start_pos == 'v') and (end_pos == "d" or end_pos == "i"):
         return True
     return False
 
@@ -72,12 +75,22 @@ for item in all_items:
     dep = item.get("dep")
     words_origin = item.get("origin_pos")
     sent = item.get("sent")
-    this_res = []
+    res_table1 = []
     # table 4 rule 1
     for dd in dep:
         start,end,rel = dd
         start_pos,end_pos,start_word,end_word = get_relationship(words_origin,start,end)
         for rule in all_table1_rule:
             if rule(start_pos,end_pos,rel):
-                this_res.append((start_word,end_word))
-    print("sent : %s\n comment_obj: %s" % (sent,this_res) )
+                res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
+    print("sent : %s\n comment_obj: %s" % (sent,res_table1) )
+    res_rule_coo = []
+    for start_word,end_word,start_pos,end_pos,rel,start,end in res_table1:
+        if start_pos == "n":
+            for index in range(start-1,end-1):
+                par = dep[index]
+                if par[1] == start and par[2] == 'COO':
+                    res_rule_coo.append(("".join(words_origin[start-1:index]),end_word,start_pos,end_pos,rel,start,end,"coo"))
+    print(" coo_comment_obj: %s" % (res_rule_coo) )
+
+
