@@ -321,6 +321,7 @@ for item in all_items:
         start_pos,end_pos,start_word,end_word = get_relationship(pos_origin,start,end)
         if rule_8(start_pos,end_pos,rel) and (start_word,end_word) not in only_obj:
             sdp_res_comment_obj.append((start_word,end_word,start_pos,end_pos,rel,start,end))
+    print(" sdp_res_comment_obj : %s" % sdp_res_comment_obj)
     # res_rule_coo = []
     # res_rule_att = []
     # res_rule_v_att = []
