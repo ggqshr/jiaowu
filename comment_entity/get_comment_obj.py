@@ -323,6 +323,7 @@ for item in all_items:
             sdp_res_comment_obj.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     print(" sdp_res_comment_obj : %s" % sdp_res_comment_obj)
     completion_sdp_obj_res = []
+    completion_sdp_review_res = []
     for item in sdp_res_comment_obj:
         start_word,end_word,start_pos,end_pos,rel,start,end = item
         complete_obj_item = None
@@ -339,7 +340,21 @@ for item in all_items:
         this_res.extend(list(item)[1:])
         complete_obj_item = tuple(this_res)
         completion_sdp_obj_res.append(complete_obj_item)
+        before_com_end,after_com_end = "",""
+        if end_pos == 'a':
+            res = rule_13(dep,words_origin,*item)
+            if res:
+                before_com_end = res[1]
+            
+            res = rule_14(dep,pos_origin,*item)
+            if res:
+                after_com_end = res[1]
+        this_end_word = before_com_end + end_word + after_com_end
+        complete_obj_item = list(complete_obj_item)
+        complete_obj_item[1] = this_end_word 
+        completion_sdp_review_res.append(tuple(complete_obj_item))
     print(" completion_sdp_obj_res : %s" % completion_sdp_obj_res)
+    print(" completion_sdp_review_res : %s" % completion_sdp_review_res)
     # res_rule_coo = []
     # res_rule_att = []
     # res_rule_v_att = []
