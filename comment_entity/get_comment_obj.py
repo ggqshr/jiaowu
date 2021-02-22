@@ -83,7 +83,7 @@ def rule_9(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end)
             count += 1
             if rel in ['ATT','ADV']:
                 if parent == start:
-                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"att&adv")
+                    return ("".join(words_origin[index:start-1]),end_word,start_pos,end_pos,rel,index,end,"att&adv")
                 else:
                     this_par = dep[parent-1]
                     parent = this_par[1]
@@ -100,7 +100,7 @@ def rule_10(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
     for index in range(start-1,end-1):
         par = dep[index]
         if par[1] == start and par[2] == 'COO':
-            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
+            return ("".join(words_origin[start:index+1]),end_word,start_pos,end_pos,rel,start,end,"coo")
 
 def rule_11(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
     for index in range(0,start-1):
@@ -112,7 +112,7 @@ def rule_11(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
             count += 1
             if rel in ['ATT','ADV','SBV','FOB']:
                 if parent == start:
-                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"v_att&adv&sbv&fob")
+                    return ("".join(words_origin[index:start-1]),end_word,start_pos,end_pos,rel,index,end,"v_att&adv&sbv&fob")
                 else:
                     this_par = dep[parent-1]
                     parent = this_par[1]
@@ -124,7 +124,7 @@ def rule_12(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
     for index in range(start-1,end-1):
         par = dep[index]
         if par[1] == start and par[2] in ['COO','VOB']:
-            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"v_coo&vob")
+            return ("".join(words_origin[start:index+1]),end_word,start_pos,end_pos,rel,start,end,"v_coo&vob")
 
 def rule_13(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
     for index in range(0,end-1):
@@ -239,7 +239,7 @@ for item in all_items:
     words_origin = item.get("all_words_origin")
     sent = item.get("sent")
     res_table1 = []
-    # table 4 rule 1
+    # table 4
     for dd in dep:
         start,end,rel = dd
         start_pos,end_pos,start_word,end_word = get_relationship(pos_origin,start,end)
@@ -248,62 +248,96 @@ for item in all_items:
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     print("sent : %s" % sent)
     print(" comment_obj: %s" % (res_table1) )
-    res_rule_coo = []
-    res_rule_att = []
-    res_rule_v_att = []
-    res_rule_v_coo = []
-    res_rule_end_a_att = []
-    res_rule_end_v_att = []
-    res_rule_end_a_aa = []
-    res_rule_end_v_d__n_or_v = []
-    res_rule_end_v_ddd_a = []
-    res_rule_end_v_ddd__a_or_i_or_v = []
+    completion_obj_res = []
     for item in res_table1:
-        start_pos = item[2]
-        end_pos = item[3]
-        if start_pos == "n":
-            # coo
-            res = rule_10(dep,words_origin,*item)
-            if res:
-                res_rule_coo.append(res)
-
-            # att & adv
+        start_word,end_word,start_pos,end_pos,rel,start,end = item
+        if start_pos == 'n':
+            before_com = ""
             res = rule_9(dep,words_origin,*item)
             if res:
-                res_rule_att.append(res)
+                before_com = res[0]
+
+            after_com = ""
+            res = rule_10(dep,words_origin,*item)
+            if res:
+                after_com = res[0]
+            this_res = [before_com + start_word + after_com]
+            this_res.extend(list(item)[1:])
+            completion_obj_res.append(tuple(this_res))
         elif start_pos == 'v':
-            # att & adv & sbv & fob
-            res = rule_11(dep,words_origin,*item)
+            before_com = ""
+            res = rule_9(dep,words_origin,*item)
+            if res is None:
+                res = rule_11(dep,words_origin,*item)
             if res:
-                res_rule_v_att.append(res)
+                before_com = res[0]
+            
+            after_com = ""
+            res = rule_10(dep,words_origin,*item)
+            if res is None:
+                res = rule_12(dep,words_origin,*item)
+            if res:
+                after_com = res[0]
+            this_res = [before_com + start_word + after_com]
+            this_res.extend(list(item)[1:])
+            completion_obj_res.append(tuple(this_res))
+    print(" completion_obj_res : %s" % completion_obj_res)
+    # res_rule_coo = []
+    # res_rule_att = []
+    # res_rule_v_att = []
+    # res_rule_v_coo = []
+    # res_rule_end_a_att = []
+    # res_rule_end_v_att = []
+    # res_rule_end_a_aa = []
+    # res_rule_end_v_d__n_or_v = []
+    # res_rule_end_v_ddd_a = []
+    # res_rule_end_v_ddd__a_or_i_or_v = []
+    # for item in res_table1:
+    #     start_pos = item[2]
+    #     end_pos = item[3]
+    #     if start_pos == "n":
+    #         # coo
+    #         res = rule_10(dep,words_origin,*item)
+    #         if res:
+    #             res_rule_coo.append(res)
 
-            res = rule_12(dep,words_origin,*item)
-            if res:
-                res_rule_v_coo.append(res)
-        if end_pos == 'a':
-            res = rule_13(dep,words_origin,*item)
-            if res:
-                res_rule_end_a_att.append(res)
+    #         # att & adv
+    #         res = rule_9(dep,words_origin,*item)
+    #         if res:
+    #             res_rule_att.append(res)
+    #     elif start_pos == 'v':
+    #         # att & adv & sbv & fob
+    #         res = rule_11(dep,words_origin,*item)
+    #         if res:
+    #             res_rule_v_att.append(res)
 
-            res = rule_14(dep,pos_origin,*item)
-            if res:
-                res_rule_end_a_aa.append(res)
-        elif end_pos == 'v':
-            res = rule_15(dep,words_origin,*item)
-            if res:
-                res_rule_end_v_att.append(res)
+    #         res = rule_12(dep,words_origin,*item)
+    #         if res:
+    #             res_rule_v_coo.append(res)
+    #     if end_pos == 'a':
+    #         res = rule_13(dep,words_origin,*item)
+    #         if res:
+    #             res_rule_end_a_att.append(res)
 
-            res = rule_16(dep,pos_origin,*item)
-            if res:
-                res_rule_end_v_d__n_or_v.append(res)
+    #         res = rule_14(dep,pos_origin,*item)
+    #         if res:
+    #             res_rule_end_a_aa.append(res)
+    #     elif end_pos == 'v':
+    #         res = rule_15(dep,words_origin,*item)
+    #         if res:
+    #             res_rule_end_v_att.append(res)
 
-            res = rule_17(dep,pos_origin,*item)
-            if res:
-                res_rule_end_v_ddd_a.append(res)
+    #         res = rule_16(dep,pos_origin,*item)
+    #         if res:
+    #             res_rule_end_v_d__n_or_v.append(res)
 
-            res = rule_18(dep,pos_origin,*item)
-            if res:
-                res_rule_end_v_ddd__a_or_i_or_v.append(res)
+    #         res = rule_17(dep,pos_origin,*item)
+    #         if res:
+    #             res_rule_end_v_ddd_a.append(res)
+
+    #         res = rule_18(dep,pos_origin,*item)
+    #         if res:
+    #             res_rule_end_v_ddd__a_or_i_or_v.append(res)
     # print(" coo_comment_obj: %s" % (res_rule_coo) )
     # print(" att_comment_obj: %s" % (res_rule_att) )
     # print(" v_att_comment_obj: %s" % (res_rule_v_att) )
@@ -313,6 +347,6 @@ for item in all_items:
     # print(" res_rule_end_v_att: %s" % (res_rule_end_v_att) )
     # print(" res_rule_end_v_d__n_or_v: %s" % (res_rule_end_v_d__n_or_v) )
     # print(" res_rule_end_v_ddd_a: %s" % (res_rule_end_v_ddd_a) )
-    print(" res_rule_end_v_ddd__a_or_i_or_v: %s" % (res_rule_end_v_ddd__a_or_i_or_v) )
+    #print(" res_rule_end_v_ddd__a_or_i_or_v: %s" % (res_rule_end_v_ddd__a_or_i_or_v) )
 
 
