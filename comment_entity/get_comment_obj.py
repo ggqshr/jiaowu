@@ -280,7 +280,7 @@ for item in all_items:
         completion_obj_res.append(complete_obj_item)
         before_com,after_com = "",""
         if end_pos == 'a':
-            res = rule_13(dep.words_origin,*item)
+            res = rule_13(dep,words_origin,*item)
             if res:
                 before_com = res[0]
             
