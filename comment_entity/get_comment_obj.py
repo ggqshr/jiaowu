@@ -12,7 +12,7 @@ from prepare.config import r_client, db
 pos_col = db.get_collection("pos_words")
 
 all_items = pos_col.find(
-    {}, {"dep": True, "origin_pos": True, "_id": True,"sent":True,"all_words_origin":True}, no_cursor_timeout=True)
+    {}, {"dep": True, "origin_pos": True, "_id": True,"sent":True,"all_words_origin":True,'sdp':True}, no_cursor_timeout=True)
 
 
 def get_relationship(words_pos_list, start, end):
