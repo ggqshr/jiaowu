@@ -278,20 +278,20 @@ for item in all_items:
         this_res.extend(list(item)[1:])
         complete_obj_item = tuple(this_res)
         completion_obj_res.append(complete_obj_item)
-        before_com,after_com = "",""
+        before_com_end,after_com_end = "",""
         if end_pos == 'a':
             res = rule_13(dep,words_origin,*item)
             if res:
-                before_com = res[0]
+                before_com_end = res[0]
             
             res = rule_14(dep,pos_origin,*item)
             if res:
-                after_com = res[0]
+                after_com_end = res[0]
         elif end_pos == 'v':
             res = rule_15(dep,words_origin,*item)
             if res:
-                before_com = res[0]
-        this_end_word = before_com + end_word + after_com
+                before_com_end = res[0]
+        this_end_word = before_com_end + end_word + after_com_end
         complete_obj_item = list(complete_obj_item)
         complete_obj_item[1] = this_end_word 
         completion_obj_review_res.append(tuple(complete_obj_item))
