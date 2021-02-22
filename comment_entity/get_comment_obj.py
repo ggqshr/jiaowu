@@ -169,7 +169,7 @@ def rule_16(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                 if index < (len(dep) - 1):
                     n_word,n_pos = pos_origin[index+1]
                     if n_pos in ['n','v']:
-                        word_res += (end_word + c_word + n_word)
+                        word_res += (c_word + n_word)
                         return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d_n/v')
 
 def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
@@ -183,7 +183,7 @@ def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
                     if n_pos == 'a':
-                        word_res += (end_word+c_word+n_word)
+                        word_res += (c_word+n_word)
                         return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
                     temp = []
                     while n_pos == 'd':
@@ -197,7 +197,7 @@ def rule_17(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                         ii += 1
                         ww,pp = pos_origin[ii]
                         if pp == 'a':
-                            word_res += (end_word+c_word+"".join(temp)+ww)
+                            word_res += (c_word+"".join(temp)+ww)
                             return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_a')
 
 def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
@@ -215,7 +215,7 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                     ii = index + 1
                     n_word,n_pos = pos_origin[ii]
                     if n_pos != "d" and n_pos in ['i','v','a']:
-                        word_res += (end_word+c_word+n_word)
+                        word_res += (c_word+n_word)
                         return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_i/v/a')
                     temp = []
                     while n_pos == 'd':
@@ -229,7 +229,7 @@ def rule_18(dep,pos_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
                         ii += 1
                         ww,pp = pos_origin[ii]
                         if pp in ['i','v','a']:
-                            word_res += (end_word+c_word+"".join(temp)+ww)
+                            word_res += (c_word+"".join(temp)+ww)
                             return (start_word,word_res,start_pos,end_pos,rel,start,end,'v_d+_i/v/a')
 
 for item in all_items:
@@ -291,6 +291,17 @@ for item in all_items:
             res = rule_15(dep,words_origin,*item)
             if res:
                 before_com_end = res[1]
+
+            if end_word in ['是','有','没有','算']:
+                res = rule_16(dep,pos_origin,*item)
+                if res is None:
+                    res = rule_17(dep,pos_origin,*item)
+                if res:
+                    after_com_end = res[1]
+            else:
+                res = rule_18(dep,pos_origin,*item)
+                if res:
+                    after_com_end = res[1]
         this_end_word = before_com_end + end_word + after_com_end
         complete_obj_item = list(complete_obj_item)
         complete_obj_item[1] = this_end_word 
