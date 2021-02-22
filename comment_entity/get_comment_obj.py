@@ -70,6 +70,11 @@ def table_4_rule_7(start_pos, end_pos, rel):
 
 all_table1_rule = [eval("table_4_rule_%s" % i) for i in range(1,8)]
 
+def rule_8(start_pos,end_pos,rel):
+    if rel == 'EXP' and start_pos == 'n' and end_pos == 'a':
+        return True
+    return False
+
 def rule_9(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
     """
     使用ATT或者ADV关系补全评论对象提取
@@ -238,6 +243,7 @@ for item in all_items:
     pos_origin = item.get("origin_pos")
     words_origin = item.get("all_words_origin")
     sent = item.get("sent")
+    sdp = item.get("sdp")
     res_table1 = []
     # table 4
     for dd in dep:
@@ -248,6 +254,7 @@ for item in all_items:
                 res_table1.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     print("sent : %s" % sent)
     print(" comment_obj: %s" % (res_table1) )
+    only_obj = [(i[0],i[1]) for i in res_table1]
     completion_obj_res = []
     completion_obj_review_res = []
     for item in res_table1:
@@ -306,8 +313,14 @@ for item in all_items:
         complete_obj_item = list(complete_obj_item)
         complete_obj_item[1] = this_end_word 
         completion_obj_review_res.append(tuple(complete_obj_item))
-    print(" completion_obj_res : %s" % completion_obj_res)
-    print(" completion_obj_review_res : %s" % completion_obj_review_res)
+    # print(" completion_obj_res : %s" % completion_obj_res)
+    # print(" completion_obj_review_res : %s" % completion_obj_review_res)
+    sdp_res_comment_obj = []
+    for ss in sdp:
+        start,end,rel = ss
+        start_pos,end_pos,start_word,end_word = get_relationship(pos_origin,start,end)
+        if rule_8(start_pos,end_pos,rel) and (start_word,end_word) not in only_obj:
+            sdp_res_comment_obj.append((start_word,end_word,start_pos,end_pos,rel,start,end))
     # res_rule_coo = []
     # res_rule_att = []
     # res_rule_v_att = []
