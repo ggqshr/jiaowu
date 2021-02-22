@@ -292,8 +292,9 @@ for item in all_items:
             if res:
                 before_com = res[0]
         this_end_word = before_com + end_word + after_com
-        complete_obj_item[1] = this_end_word
-        completion_obj_review_res.append(complete_obj_item)
+        complete_obj_item = list(complete_obj_item)
+        complete_obj_item[1] = this_end_word 
+        completion_obj_review_res.append(tuple(complete_obj_item))
     print(" completion_obj_res : %s" % completion_obj_res)
     print(" completion_obj_review_res : %s" % completion_obj_review_res)
     # res_rule_coo = []
