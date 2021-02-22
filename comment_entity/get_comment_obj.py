@@ -330,6 +330,6 @@ for item in all_items:
     # print(" res_rule_end_v_att: %s" % (res_rule_end_v_att) )
     # print(" res_rule_end_v_d__n_or_v: %s" % (res_rule_end_v_d__n_or_v) )
     # print(" res_rule_end_v_ddd_a: %s" % (res_rule_end_v_ddd_a) )
-    print(" res_rule_end_v_ddd__a_or_i_or_v: %s" % (res_rule_end_v_ddd__a_or_i_or_v) )
+    #print(" res_rule_end_v_ddd__a_or_i_or_v: %s" % (res_rule_end_v_ddd__a_or_i_or_v) )
 
 
