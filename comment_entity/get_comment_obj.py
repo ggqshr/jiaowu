@@ -112,7 +112,7 @@ def rule_11(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
             count += 1
             if rel in ['ATT','ADV','SBV','FOB']:
                 if parent == start:
-                    return ("".join(words_origin[index:start]),end_word,start_pos,end_pos,rel,index,end,"v_att&adv&sbv&fob")
+                    return ("".join(words_origin[index:start-1]),end_word,start_pos,end_pos,rel,index,end,"v_att&adv&sbv&fob")
                 else:
                     this_par = dep[parent-1]
                     parent = this_par[1]
@@ -124,7 +124,7 @@ def rule_12(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end
     for index in range(start-1,end-1):
         par = dep[index]
         if par[1] == start and par[2] in ['COO','VOB']:
-            return ("".join(words_origin[start-1:index+1]),end_word,start_pos,end_pos,rel,start,end,"v_coo&vob")
+            return ("".join(words_origin[start:index+1]),end_word,start_pos,end_pos,rel,start,end,"v_coo&vob")
 
 def rule_13(dep,words_origin,start_word,end_word,start_pos,end_pos,rel,start,end):
     for index in range(0,end-1):
@@ -259,6 +259,23 @@ for item in all_items:
 
             after_com = ""
             res = rule_10(dep,words_origin,*item)
+            if res:
+                after_com = res[0]
+            this_res = [before_com + start_word + after_com]
+            this_res.extend(list(item)[1:])
+            completion_obj_res.append(tuple(this_res))
+        elif start_pos == 'v':
+            before_com = ""
+            res = rule_9(dep,words_origin,*item)
+            if res is None:
+                res = rule_11(dep,words_origin,*item)
+            if res:
+                before_com = res[0]
+            
+            after_com = ""
+            res = rule_10(dep,words_origin,*item)
+            if res is None:
+                res = rule_12(dep,words_origin,*item)
             if res:
                 after_com = res[0]
             this_res = [before_com + start_word + after_com]
