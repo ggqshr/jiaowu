@@ -282,15 +282,15 @@ for item in all_items:
         if end_pos == 'a':
             res = rule_13(dep,words_origin,*item)
             if res:
-                before_com_end = res[0]
+                before_com_end = res[1]
             
             res = rule_14(dep,pos_origin,*item)
             if res:
-                after_com_end = res[0]
+                after_com_end = res[1]
         elif end_pos == 'v':
             res = rule_15(dep,words_origin,*item)
             if res:
-                before_com_end = res[0]
+                before_com_end = res[1]
         this_end_word = before_com_end + end_word + after_com_end
         complete_obj_item = list(complete_obj_item)
         complete_obj_item[1] = this_end_word 
