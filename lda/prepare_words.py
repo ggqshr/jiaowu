@@ -20,7 +20,6 @@ for item in all_item:
     words = item.get("all_words_filter")
     words = [obj.sub_match(word) for word in words]
     words = list(filter(lambda x:not filter_stop_words(x),words))
-    print(words)
     all_data.append(words)
 
 with data_file.open(mode="wb") as f:
