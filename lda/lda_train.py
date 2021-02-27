@@ -13,6 +13,8 @@ numpy.random.seed(1024) # setting random seed to get the same results each time.
 data_path = Path("../data/lda")
 word_file = data_path.joinpath("filter_words.pth")
 all_words = loads(word_file.read_bytes())
+model_path = data_path.joinpath("model")
+model_path.mkdir(exist_ok=True)
 
 dic = corpora.Dictionary(all_words)
 dic.filter_extremes(no_below=5,no_above=0.7)
@@ -30,4 +32,4 @@ model = LdaModel(
     num_topics=20,
     eval_every=1
 )
-model.save(data_path.joinpath("model").joinpath("ldamodel.model"))
+model.save(model_path.joinpath("ldamodel.model"))
