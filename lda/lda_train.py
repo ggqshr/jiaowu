@@ -32,4 +32,4 @@ model = LdaModel(
     num_topics=20,
     eval_every=1
 )
-model.save(model_path.joinpath("ldamodel.model"))
+model.save(str(model_path.joinpath("ldamodel.model")))
